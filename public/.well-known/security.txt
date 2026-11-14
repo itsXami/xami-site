@@ -1,0 +1,5 @@
+Contact: https://github.com/itsXami/vonar/security/advisories/new
+Expires: 2027-08-14T00:00:00.000Z
+Preferred-Languages: en, pl
+Canonical: https://xami-sound.pages.dev/.well-known/security.txt
+Policy: https://github.com/itsXami/xami-site/blob/main/SECURITY.md

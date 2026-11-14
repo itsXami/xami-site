@@ -9,7 +9,7 @@ Ten plik wystarcza, żeby nowa sesja mogła kontynuować pracę. Zasady i decyzj
 | 1 | Szkielet Astro + publikacja na Cloudflare Pages | ✅ gotowe |
 | 2 | Strona Vonara (makieta A) | ✅ gotowe |
 | 3 | Dema audio (12 presetów) | ✅ gotowe |
-| 4 | Wykończenie: podstrony Vonara, `/legal` i „Lista przed publikacją” | 🔄 w toku |
+| 4 | Wykończenie: podstrony Vonara, `/legal` i „Lista przed publikacją” | ✅ po stronie kodu; ⚠️ zostały kroki użytkownika (niżej) |
 
 ## Etap 1 — co jest w repo
 
@@ -83,7 +83,46 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
   180×180; obraz podglądu linku `public/og-vonar.png` 1200×630 (zrobiony w Playwright z czcionek strony i zrzutu
   Synth) i tagi Open Graph/Twitter na każdej stronie (`src/layouts/Base.astro`, prop `ogImage`);
   `@astrojs/sitemap` 3.7.5 (`sitemap-index.xml`, bez 404) i `public/robots.txt`. `npm audit --omit=dev`: 0 podatności.
-- [ ] Bezpieczeństwo i jakość: `security.txt`, `SECURITY.md`, `docs/INCIDENT.md`, Lighthouse w CI.
+- [x] Bezpieczeństwo i jakość: `public/.well-known/security.txt` (Contact = Private vulnerability reporting Vonara,
+  Expires 2027-08-14 — odnowić przed tą datą), `SECURITY.md`, `docs/INCIDENT.md` (plan awaryjny), job CI
+  „Lighthouse (mobile)” (`@lhci/cli` 0.16.1 przez `npx` w osobnym jobie, żeby nie dokładać ok. 5000 linii zależności
+  z podatnością `basic-ftp` do `package-lock.json`; minimum 95 w każdej kategorii, 4 strony).
+
+## Lista przed publikacją — status
+
+| # | Punkt | Status |
+|---|---|---|
+| 1 | Polityka prywatności | ✅ `/legal/` — ⚠️ akapit o statystykach `[DO UZUPEŁNIENIA]` (użytkownik) |
+| 2 | Regulamin | ✅ `/legal/` |
+| 3 | Brak sekretów | ✅ gitleaks w CI; strona bez kluczy |
+| 4 | HTTPS | ✅ Cloudflare Pages + HSTS w `_headers`; linki `https://` |
+| 5 | Baner cookies | ✅ niepotrzebny — brak ciasteczek i localStorage (sprawdzone w Playwright); ⚠️ sprawdzić na produkcji w DevTools po włączeniu Web Analytics |
+| 6 | Tytuły i opisy | ✅ każda strona |
+| 7 | Obraz podglądu linku | ✅ `og-vonar.png` 1200×630 |
+| 8 | Favicon | ✅ SVG + PNG 180×180 |
+| 9 | Sitemap + robots | ✅ |
+| 10 | Teksty alternatywne | ✅ zrzuty z `alt`, dekoracje `aria-hidden` |
+| 11 | Kompresja obrazów | ✅ AVIF/WebP 600/900/1200 px (zrzut Synth ok. 15–40 KB zamiast PNG) |
+| 12 | Szybkość | ✅ Lighthouse w CI (minimum 95); audio dopiero po „play” |
+| 13 | Kontrast | ✅ kolory z makiety; `#A3A3A3` tylko w dużych nagłówkach |
+| 14 | Telefon | ✅ 375 px bez przewijania w bok (Playwright, każda strona) |
+| 15 | Strona 404 | ✅ |
+| 16 | Zepsute linki | ✅ wewnętrzne w CI; ⚠️ zewnętrzne — sprawdzić raz przed publikacją |
+| 17 | Walidacja formularzy | ➖ nie dotyczy (brak formularzy) |
+| 18 | Ochrona przed spamem | ➖ nie dotyczy |
+| 19 | Statystyki | ⚠️ użytkownik: włączyć/sprawdzić Cloudflare Web Analytics, potem uzupełnić `/legal/` |
+| 20 | Jedno wezwanie do działania | ✅ „Download” |
+
+## Do zrobienia przez użytkownika (przed ogłoszeniem strony)
+
+- Cloudflare → Web Analytics: sprawdzić, czy jest włączone i w jakim trybie; napisać Claude, żeby uzupełnił `/legal/`.
+- Podglądy PR: Cloudflare Access (Zero Trust, darmowe) albo wyłączenie podglądów.
+- Repo `xami-site` i `vonar`: Settings → Advanced Security — secret scanning z push protection, Dependabot alerts
+  i security updates, **Private vulnerability reporting** (potrzebne dla `security.txt` i `SECURITY.md`).
+- `security.txt` wskazuje `SECURITY.md` w repo strony — link działa, jeśli repo jest publiczne.
+- `SECURITY.md` w repo Vonara (Claude nie ma tam zapisu).
+- Dodać job „Lighthouse (mobile)” do wymaganych w regule `main`, gdy przejdzie pierwszy raz.
+- Po publikacji: Google Search Console (instrukcja od Claude).
 
 ## Dziennik
 
@@ -98,8 +137,4 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
 - 2026-11-14: Etap 4 (2) — FAQ i changelog.
 - 2026-11-14: Etap 4 (3) — `/legal` i strona 404.
 - 2026-11-14: Etap 4 (4) — favicon, obraz podglądu linku, sitemap, robots.txt.
-
-## Do zrobienia przez użytkownika
-
-- Settings → Advanced Security: secret scanning z push protection, Dependabot alerts i security
-  updates, Private vulnerability reporting.
+- 2026-11-14: Etap 4 (5) — Lighthouse w CI, `security.txt`, `SECURITY.md`, plan awaryjny; status 20 punktów.
