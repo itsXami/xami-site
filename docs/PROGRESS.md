@@ -79,7 +79,10 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
   sprawdza tryb Cloudflare Web Analytics w panelu. Link „Legal” w stopce.
 - [x] Strona 404 (`src/pages/404.astro` → `dist/404.html`, Cloudflare Pages podaje ją sama) z linkiem do pobrania
   i strony głównej.
-- [ ] SEO: favicon, Open Graph, `sitemap.xml`, `robots.txt`.
+- [x] SEO: `public/favicon.svg` (czarny kwadrat, białe „x”, kropka w kolorze akcentu) + `apple-touch-icon.png`
+  180×180; obraz podglądu linku `public/og-vonar.png` 1200×630 (zrobiony w Playwright z czcionek strony i zrzutu
+  Synth) i tagi Open Graph/Twitter na każdej stronie (`src/layouts/Base.astro`, prop `ogImage`);
+  `@astrojs/sitemap` 3.7.5 (`sitemap-index.xml`, bez 404) i `public/robots.txt`. `npm audit --omit=dev`: 0 podatności.
 - [ ] Bezpieczeństwo i jakość: `security.txt`, `SECURITY.md`, `docs/INCIDENT.md`, Lighthouse w CI.
 
 ## Dziennik
@@ -94,6 +97,7 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
 - 2026-11-14: Etap 4 (1) — instrukcja instalacji z sekcją o SmartScreen i linki do niej (prośba użytkownika).
 - 2026-11-14: Etap 4 (2) — FAQ i changelog.
 - 2026-11-14: Etap 4 (3) — `/legal` i strona 404.
+- 2026-11-14: Etap 4 (4) — favicon, obraz podglądu linku, sitemap, robots.txt.
 
 ## Do zrobienia przez użytkownika
 
