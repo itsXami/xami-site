@@ -104,7 +104,8 @@ produktów i osobne podstrony (`/vonar`, …).
 
 - Tylko prawdziwe fakty z repo Vonara (README, `docs/`, `CMakeLists.txt`). Żadnych wymyślonych liczb,
   opinii ani recenzji. Brak danych → widoczny znacznik `[DO UZUPEŁNIENIA]`.
-- Fakty aktualne na 1.0.0: 327 presetów, 10 efektów w racku, 8 trybów warp, oscylator strunowy,
+- Fakty aktualne na 1.0.0: 327 presetów, 10 efektów w racku, 7 trybów warp (Sync, Bend, Squeeze, Mirror, Quantize, FM, RM; plus „Off”
+  — sprawdzone w `Source/Params.h`), oscylator strunowy,
   4 makra na preset, VST3 dla Windows 10/11, instalator ok. 4,6 MB, licencja AGPLv3.
   Przy nowej wersji Vonara sprawdź je ponownie.
 - Uwaga przy pobieraniu: instalator nie jest podpisany, Windows może pokazać SmartScreen
@@ -287,5 +288,10 @@ Każdy punkt musi być spełniony przed pierwszą publikacją i sprawdzany przy 
   zmniejszyć `dist/`. Do rozważenia: wersja zmienna `@fontsource-variable/inter` (jeden plik zamiast kilku).
 - CI: gitleaks pobierany jako plik binarny z sumą SHA-256 (zamiast `gitleaks-action`, która wymaga
   licencji dla organizacji). Dependabot nie aktualizuje go sam — przy aktualizacji zmienić wersję i sumę ręcznie.
+- Animacje (WCAG 2.2.2): pasek fali, przesuwane nazwy i unoszący się zrzut ruszają się dłużej niż 5 s.
+  Teraz wyłącza je tylko `prefers-reduced-motion`. Do rozważenia przycisk „Pause animations” (Etap 4, audyt dostępności).
+- Zakładka „Presets” w galerii: Vonar nie ma osobnego ekranu przeglądarki presetów, a menu presetów to okienko,
+  którego `VOLT_Render --snapshot` nie zrzuca. Teraz to zestawienie dwóch prawdziwych fragmentów zrzutu (pasek
+  presetów + makra). Lepsze ujęcie wymagałoby opcji zrzutu otwartego menu w rendererze Vonara.
 - Newsletter (później): polityka prywatności rozszerzona o dane subskrybentów, regulamin newslettera,
   niezaznaczony checkbox zgody, double opt-in, link wypisania, ochrona przed spamem (punkty 17–18).

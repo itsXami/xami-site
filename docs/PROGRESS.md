@@ -7,8 +7,8 @@ Ten plik wystarcza, żeby nowa sesja mogła kontynuować pracę. Zasady i decyzj
 | # | Etap | Status |
 |---|------|--------|
 | 1 | Szkielet Astro + publikacja na Cloudflare Pages | ✅ gotowe |
-| 2 | Strona Vonara (makieta A) | ⏳ następny |
-| 3 | Dema audio (12 presetów) | — |
+| 2 | Strona Vonara (makieta A) | ✅ gotowe |
+| 3 | Dema audio (12 presetów) | ⏳ następny (czeka na listę 12 presetów) |
 | 4 | Wykończenie: `/legal` i „Lista przed publikacją” | — |
 
 ## Etap 1 — co jest w repo
@@ -29,12 +29,32 @@ Ten plik wystarcza, żeby nowa sesja mogła kontynuować pracę. Zasady i decyzj
 Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawienia: framework preset „Astro”, build command
 `npm run build`, output `dist`. Wersję Node Cloudflare bierze z `.node-version`.
 
+## Etap 2 — co jest w repo
+
+- Strona główna = strona Vonara według makiety A: nagłówek, hero, fala, galeria zrzutów (Synth / Modulation /
+  Effects / Presets), przesuwane nazwy presetów, „Start with a sound.”, sekcja dem (znacznik `[DO UZUPEŁNIENIA]`
+  do Etapu 3), „Free. / And open source.”, blok pobierania, stopka. Komponenty w `src/components/`.
+- Fakty o wydaniu w `src/data/vonar.ts` (wersja, link do pliku, SHA-256, rozmiar, liczby). Przy nowej wersji Vonara
+  zmień je tam.
+- Lista presetów `src/data/vonar-presets.json` generowana z plików JSON Vonara:
+  `node scripts/sync-vonar-presets.mjs <ścieżka do repo Vonara>`. Nazwy w pasku są sprawdzane przy buildzie.
+- SHA-256 `Vonar-1.0.0-Setup.exe`: `e580c3dc3b25b4be998d9c526e5ed6636b3540e4d068ba92381f9d6532e30802`
+  (plik pobrany z Release v1.0.0, 4 551 918 bajtów).
+- Zrzuty w `src/assets/vonar/` z `VOLT_Render --snapshot … 1.5 <zakładka>` (Vonar `711887e` = tag v1.0.0,
+  build na Linuksie): Synth z presetem „Dream Keys”, Modulation, Effects; Presets = pasek presetów i makra
+  z „Supersaw Lead” złożone w jeden obraz. Astro robi z nich AVIF/WebP 600/900/1200 px (zamiast PNG ok. 1 MB).
+- CSP: `vite.build.assetsInlineLimit: 0` — Astro nie wkleja małych skryptów ani plików jako `data:`.
+  Strona sprawdzona w Playwright z nagłówkiem CSP z `_headers`: zero błędów w konsoli, brak przewijania w bok
+  przy 375 px, zakładki działają klawiszami strzałek.
+- Poprawka faktu: Vonar ma 7 trybów warp (plus „Off”), nie 8 — poprawione w `CLAUDE.md`.
+
 ## Dziennik
 
 - 2026-11-14: repo założone; pierwszy commit z `CLAUDE.md`, README, `.gitignore` i tym plikiem.
 - 2026-11-14: Etap 1 — szkielet Astro, czcionki, `_headers`, CI (build, linki, gitleaks), Dependabot (PR #1).
 - 2026-11-14: reguła `main` z wymaganymi jobami CI; projekt Cloudflare Pages `xami-sound`, adres `xami-sound.pages.dev`.
 - 2026-11-14: Etap 1 zakończony (produkcja i podgląd PR działają). Od teraz Claude scala PR sam przy zielonym CI i podglądzie.
+- 2026-11-14: Etap 2 — strona Vonara według makiety A, zrzuty z aktualnej wersji, link do pliku i SHA-256.
 
 ## Do zrobienia przez użytkownika
 

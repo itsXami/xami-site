@@ -1,0 +1,71 @@
+---
+import { vonar } from '../data/vonar';
+---
+
+<header class="site-header wrap">
+  <a class="logo" href="/" aria-label="xami – home">xami</a>
+  <nav aria-label="Main">
+    <ul>
+      <li><a href="#sounds">Sounds</a></li>
+      <li><a href="#free">Open source</a></li>
+      <li><a href={vonar.repoUrl}>GitHub</a></li>
+      <li><a class="nav-download" href="#download">Download</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 16px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .logo {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 24px;
+    letter-spacing: -0.04em;
+    text-decoration: none;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  nav a:not(.nav-download) {
+    display: inline-block;
+    padding: 12px 0;
+  }
+
+  @media (hover: hover) {
+    nav a:not(.nav-download):hover {
+      color: var(--eyebrow);
+    }
+  }
+
+  .nav-download {
+    display: inline-block;
+    background: var(--text);
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 999px;
+    font-weight: 600;
+  }
+</style>

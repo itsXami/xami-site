@@ -1,10 +1,32 @@
 ---
 import Base from '../layouts/Base.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import Hero from '../components/Hero.astro';
+import Wave from '../components/Wave.astro';
+import Gallery from '../components/Gallery.astro';
+import PresetMarquee from '../components/PresetMarquee.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import Sounds from '../components/Sounds.astro';
+import OpenSource from '../components/OpenSource.astro';
+import DownloadBlock from '../components/DownloadBlock.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { vonar } from '../data/vonar';
 ---
 
-<Base title="Xami" description="Free plugins and presets for music producers.">
-  <main>
-    <h1>Xami</h1>
-    <p>Free plugins and presets for music producers — coming soon.</p>
+<Base
+  title="Vonar – free wavetable synth for FL Studio (VST3, Windows) · Xami"
+  description={`Vonar is a free, open-source wavetable synthesizer (VST3) for FL Studio on Windows, with ${vonar.presetCount} presets and ${vonar.effectCount} effects.`}
+>
+  <SiteHeader />
+  <main id="main">
+    <Hero />
+    <Wave />
+    <Gallery />
+    <PresetMarquee />
+    <HowItWorks />
+    <Sounds />
+    <OpenSource />
+    <DownloadBlock />
   </main>
+  <SiteFooter />
 </Base>

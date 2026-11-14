@@ -1,0 +1,61 @@
+---
+import { vonarPresets } from '../data/vonar';
+
+// Names shown in the scrolling strip. Each must exist in src/data/vonar-presets.json
+// (generated from Vonar's preset files) — the build fails otherwise.
+const picks = [
+  'Supersaw Lead',
+  'Drill Slide 808',
+  'Dream Keys',
+  'Glass Piano',
+  'Hyper Pluck Lead',
+  'Trance Gate Lead',
+  'Nylon Pluck',
+  'Crystal Keys',
+  'Acid Bath',
+  'Clean 808',
+];
+const known = new Set(vonarPresets.map((p) => p.name));
+const missing = picks.filter((n) => !known.has(n));
+if (missing.length) throw new Error(`Unknown Vonar presets in marquee: ${missing.join(', ')}`);
+---
+
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    {[...picks, ...picks].map((name) => <span>{name}</span>)}
+  </div>
+</div>
+
+<style>
+  .marquee {
+    padding: 40px 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .track {
+    display: inline-flex;
+    gap: 48px;
+    padding-left: 48px;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(28px, 4vw, 40px);
+    letter-spacing: -0.03em;
+    color: #cfc9bf;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .track {
+      animation: marquee 38s linear infinite;
+    }
+  }
+</style>
