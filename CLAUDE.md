@@ -23,7 +23,7 @@ najpierw produkt, potem otoczka.
 | Podpis | Tylko pseudonim **Xami**. Nigdzie imienia, nazwiska, wieku, miasta ani prywatnego e-maila. |
 | Wygląd | Makieta **A — Studio (jasna)**: https://claude.ai/artifact/8j3j1wNBnXhnxjFmoQ4czz |
 | Pobieranie | Przycisk prowadzi prosto do pliku z GitHub Releases Vonara. Plików pluginu nie kopiujemy na stronę. |
-| Statystyki | Tylko Cloudflare Web Analytics (bez ciasteczek, więc bez banera cookies). |
+| Statystyki | **Wyłączone** (decyzja użytkownika 2026-11-14): na `*.pages.dev` Cloudflare Web Analytics nie ma opcji pomijania odwiedzających z UE, a pomiar w UE bez zgody to szara strefa. Liczbę pobrań pokazują liczniki plików na GitHubie. Przy własnej domenie: patrz „Otwarte”. |
 | Platformy Vonara | Tylko Windows (VST3). Nie obiecuj macOS ani Linuksa. |
 
 ## Sposób pracy
@@ -294,5 +294,8 @@ Każdy punkt musi być spełniony przed pierwszą publikacją i sprawdzany przy 
   obejmują też presety użytkownika (razem 336), więc przy nowej wersji zrobić zrzut na czystej instalacji.
 - Pasek boczny / lista pluginów (pomysł użytkownika, 2026-11-14): odłożone do drugiego produktu. Teraz linki
   do podstron w menu u góry i w stopce; przy drugim produkcie menu „Plugins” i kafelki na stronie głównej.
+- Statystyki przy własnej domenie: po podpięciu domeny przez Cloudflare sprawdzić, czy Web Analytics ma opcję
+  „excluding visitor data in the EU”; jeśli tak — włączyć z nią i opisać w `/legal`. CSP w `_headers` nadal
+  dopuszcza `cloudflareinsights.com`, więc kod strony nie wymaga zmian.
 - Newsletter (później): polityka prywatności rozszerzona o dane subskrybentów, regulamin newslettera,
   niezaznaczony checkbox zgody, double opt-in, link wypisania, ochrona przed spamem (punkty 17–18).
