@@ -41,8 +41,8 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
 - SHA-256 `Vonar-1.0.0-Setup.exe`: `e580c3dc3b25b4be998d9c526e5ed6636b3540e4d068ba92381f9d6532e30802`
   (plik pobrany z Release v1.0.0, 4 551 918 bajtów).
 - Zrzuty w `src/assets/vonar/` z `VOLT_Render --snapshot … 1.5 <zakładka>` (Vonar `711887e` = tag v1.0.0,
-  build na Linuksie): Synth z presetem „Dream Keys”, Modulation, Effects; Presets = pasek presetów i makra
-  z „Supersaw Lead” złożone w jeden obraz. Astro robi z nich AVIF/WebP 600/900/1200 px (zamiast PNG ok. 1 MB).
+  build na Linuksie): Synth z presetem „Dream Keys”, Modulation, Effects; Presets = zrzut od użytkownika z FL Studio
+  (otwarte menu presetów, preset „Acid Bath”), przycięty o pasek okna FL Studio. Astro robi z nich AVIF/WebP 600/900/1200 px (zamiast PNG ok. 1 MB).
 - CSP: `vite.build.assetsInlineLimit: 0` — Astro nie wkleja małych skryptów ani plików jako `data:`.
   Strona sprawdzona w Playwright z nagłówkiem CSP z `_headers`: zero błędów w konsoli, brak przewijania w bok
   przy 375 px, zakładki działają klawiszami strzałek.
@@ -72,6 +72,7 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
 - 2026-11-14: Etap 1 zakończony (produkcja i podgląd PR działają). Od teraz Claude scala PR sam przy zielonym CI i podglądzie.
 - 2026-11-14: Etap 2 — strona Vonara według makiety A, zrzuty z aktualnej wersji, link do pliku i SHA-256.
 - 2026-11-14: Etap 3 — 12 dem audio (wybór użytkownika, Rave Siren Lead zamiast Fuzz Bassline), odtwarzacz z filtrem.
+- 2026-11-14: galeria — nowy zrzut zakładki Presets (otwarte menu presetów, od użytkownika).
 
 ## Do zrobienia przez użytkownika
 

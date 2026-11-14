@@ -290,8 +290,7 @@ Każdy punkt musi być spełniony przed pierwszą publikacją i sprawdzany przy 
   licencji dla organizacji). Dependabot nie aktualizuje go sam — przy aktualizacji zmienić wersję i sumę ręcznie.
 - Animacje (WCAG 2.2.2): pasek fali, przesuwane nazwy i unoszący się zrzut ruszają się dłużej niż 5 s.
   Teraz wyłącza je tylko `prefers-reduced-motion`. Do rozważenia przycisk „Pause animations” (Etap 4, audyt dostępności).
-- Zakładka „Presets” w galerii: Vonar nie ma osobnego ekranu przeglądarki presetów, a menu presetów to okienko,
-  którego `VOLT_Render --snapshot` nie zrzuca. Teraz to zestawienie dwóch prawdziwych fragmentów zrzutu (pasek
-  presetów + makra). Lepsze ujęcie wymagałoby opcji zrzutu otwartego menu w rendererze Vonara.
+- ~~Zakładka „Presets” w galerii~~ — zrzut otwartego menu presetów od użytkownika (2026-11-14). Liczby w menu
+  obejmują też presety użytkownika (razem 336), więc przy nowej wersji zrobić zrzut na czystej instalacji.
 - Newsletter (później): polityka prywatności rozszerzona o dane subskrybentów, regulamin newslettera,
   niezaznaczony checkbox zgody, double opt-in, link wypisania, ochrona przed spamem (punkty 17–18).
