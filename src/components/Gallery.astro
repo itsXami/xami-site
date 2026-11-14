@@ -1,0 +1,205 @@
+---
+import { Picture } from 'astro:assets';
+import synth from '../assets/vonar/ui-synth.png';
+import modulation from '../assets/vonar/ui-modulation.png';
+import effects from '../assets/vonar/ui-effects.png';
+import presetsShot from '../assets/vonar/ui-presets.png';
+import { vonar } from '../data/vonar';
+
+// Screenshots come from the current Vonar version (docs/ui-*.png or VOLT_Render --snapshot).
+const tabs = [
+  {
+    id: 'synth',
+    label: 'Synth',
+    image: synth,
+    alt: 'Vonar SYNTH tab: two wavetable oscillators, the filter with its curve, envelopes, LFOs, voice and arpeggiator.',
+    caption: 'Oscillators, filter and envelopes on one screen, each with a live graph.',
+  },
+  {
+    id: 'modulation',
+    label: 'Modulation',
+    image: modulation,
+    alt: 'Vonar MODULATION tab: two LFOs, the mod envelope and a 12-slot modulation matrix.',
+    caption: 'Two LFOs, a mod envelope and a 12-slot modulation matrix.',
+  },
+  {
+    id: 'effects',
+    label: 'Effects',
+    image: effects,
+    alt: 'Vonar EFFECTS tab: the list of ten effects on the left and a panel with a live graph for each effect.',
+    caption: `${vonar.effectCount} effects in any order. Drag to reorder, shape EQ, filter, reverb and compressor right on the graphs.`,
+  },
+  {
+    id: 'presets',
+    label: 'Presets',
+    image: presetsShot,
+    alt: 'Vonar preset bar with category, mood and tag filters, search and the four macro knobs.',
+    caption: `${vonar.presetCount} presets with category, mood and tag filters. Every preset has ${vonar.macroCount} labelled macros.`,
+  },
+];
+---
+
+<section class="gallery wrap" aria-label="Screenshots">
+  <div class="tablist" role="tablist" aria-label="Vonar screens">
+    {
+      tabs.map((t, i) => (
+        <button
+          type="button"
+          role="tab"
+          id={`tab-${t.id}`}
+          aria-controls={`panel-${t.id}`}
+          aria-selected={i === 0 ? 'true' : 'false'}
+          tabindex={i === 0 ? 0 : -1}
+        >
+          {t.label}
+        </button>
+      ))
+    }
+  </div>
+  <div class="stage">
+    {
+      tabs.map((t, i) => (
+        <figure
+          class:list={['panel', { 'is-active': i === 0 }]}
+          role="tabpanel"
+          id={`panel-${t.id}`}
+          aria-labelledby={`tab-${t.id}`}
+          hidden={i !== 0}
+        >
+          <div class="frame">
+            <Picture
+              src={t.image}
+              alt={t.alt}
+              formats={['avif', 'webp']}
+              fallbackFormat="webp"
+              widths={[600, 900, 1200]}
+              sizes="(max-width: 1200px) calc(100vw - 2 * clamp(16px, 4vw, 32px) - 48px), 1104px"
+              loading={i === 0 ? 'eager' : 'lazy'}
+              fetchpriority={i === 0 ? 'high' : 'auto'}
+            />
+          </div>
+          <figcaption>{t.caption}</figcaption>
+        </figure>
+      ))
+    }
+  </div>
+</section>
+
+<script>
+  import { initGallery } from '../scripts/gallery';
+  initGallery();
+</script>
+
+<style>
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding-top: 48px;
+    padding-bottom: 24px;
+  }
+
+  .tablist {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+    padding: 4px;
+    border-radius: 999px;
+    background: var(--btn-2);
+  }
+
+  [role='tab'] {
+    min-height: 44px;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text-2);
+    font: inherit;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+  }
+
+  [role='tab'][aria-selected='true'] {
+    background: var(--text);
+    color: #fff;
+  }
+
+  @media (max-width: 480px) {
+    .tablist {
+      flex-wrap: nowrap;
+    }
+
+    [role='tab'] {
+      padding: 10px 12px;
+      font-size: 14px;
+    }
+  }
+
+  .stage {
+    width: 100%;
+  }
+
+  .panel {
+    margin: 0;
+  }
+
+  .panel[hidden] {
+    display: none;
+  }
+
+  .frame {
+    background: var(--card);
+    border-radius: clamp(16px, 3vw, 28px);
+    padding: clamp(10px, 2vw, 24px);
+  }
+
+  .frame :global(img) {
+    width: 100%;
+    border-radius: 14px;
+  }
+
+  figcaption {
+    margin-top: 16px;
+    text-align: center;
+    color: var(--text-2);
+    font-size: 16px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    @keyframes float {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .frame {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .panel.is-entering {
+      animation: fade-in 0.35s ease both;
+    }
+  }
+</style>

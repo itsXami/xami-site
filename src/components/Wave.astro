@@ -1,0 +1,80 @@
+---
+// Decorative animated waveform (48 bars). Heights and timing come from CSS only.
+const bars = Array.from({ length: 48 });
+---
+
+<div class="wave wrap" aria-hidden="true">
+  {bars.map(() => <span class="bar" />)}
+</div>
+
+<style>
+  .wave {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    height: 96px;
+  }
+
+  .bar {
+    flex: 1 1 0;
+    height: 100%;
+    border-radius: 4px;
+    background: var(--accent);
+    opacity: 0.85;
+    transform-origin: bottom;
+    transform: scaleY(0.5);
+  }
+
+  .bar:nth-child(3n) {
+    transform: scaleY(0.3);
+  }
+
+  .bar:nth-child(4n) {
+    transform: scaleY(0.8);
+  }
+
+  @media (max-width: 600px) {
+    .wave {
+      gap: 3px;
+      height: 64px;
+    }
+
+    .bar:nth-child(n + 33) {
+      display: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    @keyframes wave {
+      0%,
+      100% {
+        transform: scaleY(0.25);
+      }
+      50% {
+        transform: scaleY(1);
+      }
+    }
+
+    .bar {
+      animation: wave 1.4s ease-in-out infinite;
+    }
+
+    .bar:nth-child(2n) {
+      animation-duration: 1.1s;
+    }
+
+    .bar:nth-child(3n) {
+      animation-duration: 1.7s;
+      animation-delay: -0.4s;
+    }
+
+    .bar:nth-child(5n) {
+      animation-duration: 0.9s;
+      animation-delay: -0.7s;
+    }
+
+    .bar:nth-child(7n) {
+      animation-delay: -1s;
+    }
+  }
+</style>

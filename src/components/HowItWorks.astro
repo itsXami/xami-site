@@ -1,0 +1,109 @@
+---
+import { vonar, vonarPresets } from '../data/vonar';
+
+// Category names straight from the preset files, in the order of the plugin's menu.
+const order = ['Bass', 'Lead', 'Guitar', 'Pluck', 'Keys', 'Bell', 'Pad', 'Strings', 'Brass', 'Woodwind', 'Arp', 'Drums', 'FX'];
+const present = new Set(vonarPresets.map((p) => p.category));
+const categories = order.filter((c) => present.has(c));
+
+const steps = [
+  {
+    title: 'Pick a preset',
+    text: `${vonar.presetCount} sounds in ${categories.length} categories, from bass and leads to keys, pads and drums.`,
+  },
+  {
+    title: 'Turn four macros',
+    text: 'Every preset has four labelled knobs that change its character.',
+  },
+  {
+    title: 'Go deeper when you want',
+    text: `${vonar.warpModeCount} warp modes, a plucked-string oscillator and a ${vonar.effectCount}-effect rack.`,
+  },
+];
+---
+
+<section class="how wrap section" aria-labelledby="how-title">
+  <div class="head">
+    <p class="eyebrow">How it works</p>
+    <h2 id="how-title" class="display">Start with a sound.<span class="muted">Not a manual.</span></h2>
+  </div>
+  <ol class="steps">
+    {
+      steps.map((s, i) => (
+        <li class="card step">
+          <span class="num" aria-hidden="true">
+            {i + 1}
+          </span>
+          <div>
+            <h3>{s.title}</h3>
+            <p>{s.text}</p>
+          </div>
+        </li>
+      ))
+    }
+  </ol>
+</section>
+
+<style>
+  .how {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .head {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .steps {
+    width: 100%;
+    max-width: 760px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .step {
+    display: flex;
+    align-items: center;
+    gap: clamp(16px, 3vw, 24px);
+    background: var(--card);
+    border-radius: 22px;
+    padding: clamp(20px, 3vw, 26px) clamp(20px, 3vw, 28px);
+  }
+
+  .num {
+    flex: none;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--text);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  h3 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(22px, 3vw, 26px);
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    margin: 4px 0 0;
+    color: var(--text-2);
+    font-size: 17px;
+  }
+</style>

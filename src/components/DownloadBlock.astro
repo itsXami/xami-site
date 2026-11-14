@@ -1,0 +1,144 @@
+---
+import { vonar } from '../data/vonar';
+const { installer } = vonar;
+---
+
+<section id="download" class="wrap download-section" aria-labelledby="download-title">
+  <div class="block">
+    <div class="top">
+      <div class="intro">
+        <h2 id="download-title">Download Vonar.</h2>
+        <p class="sub">Free for {vonar.platform} · {vonar.format} · v{vonar.version}</p>
+      </div>
+      <a class="btn btn--accent get" href={installer.url}>
+        Get the installer<span class="visually-hidden"> ({installer.fileName}, {installer.sizeLabel})</span>
+      </a>
+    </div>
+
+    <dl class="facts">
+      <div>
+        <dt>File</dt>
+        <dd>{installer.fileName} · {installer.sizeLabel}</dd>
+      </div>
+      <div>
+        <dt>SHA-256</dt>
+        <dd><code class="hash">{installer.sha256}</code></dd>
+      </div>
+    </dl>
+
+    <p class="note">
+      Check the file in PowerShell: <code>Get-FileHash .\{installer.fileName} -Algorithm SHA256</code> — the result
+      must match the SHA-256 above.
+    </p>
+    <p class="note">
+      The installer is not code-signed, so Windows may show a SmartScreen warning. Choose “More info” → “Run anyway”.
+    </p>
+    <p class="note">
+      Official downloads are only available from this site and the GitHub repository. Any other site is unofficial.
+    </p>
+    <p class="note">
+      Source code: <a href={vonar.repoUrl}>github.com/itsXami/vonar</a> (<a href={vonar.licenseUrl}>AGPLv3</a>) ·
+      <a href={vonar.releaseUrl}>Release notes for v{vonar.version}</a>
+    </p>
+  </div>
+</section>
+
+<style>
+  .download-section {
+    padding-top: 48px;
+    padding-bottom: 80px;
+  }
+
+  .block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: var(--text);
+    color: #fff;
+    border-radius: clamp(20px, 4vw, 32px);
+    padding: clamp(28px, 6vw, 80px);
+  }
+
+  .top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px 32px;
+    margin-bottom: 16px;
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  h2 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(36px, 5vw, 60px);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+  }
+
+  .sub {
+    margin: 0;
+    font-size: 18px;
+    color: #b3b3b3;
+  }
+
+  .get {
+    font-size: 18px;
+    padding: 20px 32px;
+  }
+
+  .facts {
+    display: grid;
+    gap: 8px;
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .facts div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+  }
+
+  dt {
+    color: #b3b3b3;
+    min-width: 72px;
+  }
+
+  dd {
+    margin: 0;
+    min-width: 0;
+  }
+
+  code {
+    font-family: ui-monospace, 'Cascadia Mono', Consolas, monospace;
+    font-size: 0.92em;
+  }
+
+  .hash {
+    overflow-wrap: anywhere;
+  }
+
+  .note {
+    margin: 0;
+    font-size: 14px;
+    color: #b3b3b3;
+    overflow-wrap: anywhere;
+  }
+
+  .note a {
+    color: #fff;
+    text-underline-offset: 3px;
+  }
+
+  .block :focus-visible {
+    outline-color: #fff;
+  }
+</style>

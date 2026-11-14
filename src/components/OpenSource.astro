@@ -1,0 +1,86 @@
+---
+import { vonar } from '../data/vonar';
+---
+
+<section id="free" class="free wrap section" aria-labelledby="free-title">
+  <h2 id="free-title" class="display">Free.<span class="muted">And open source.</span></h2>
+  <ul class="cards">
+    <li class="card c-mint">
+      <h3>No account, no key</h3>
+      <p>Download, install, open FL Studio. No registration, nothing to unlock.</p>
+    </li>
+    <li class="card c-sky">
+      <h3>Code on GitHub</h3>
+      <p>
+        The full source is public under the <a href={vonar.licenseUrl}>AGPLv3</a>. Read it, or{' '}
+        <a href={vonar.repoUrl}>build it yourself</a>.
+      </p>
+    </li>
+    <li class="card c-peach">
+      <h3>Share your presets</h3>
+      <p>
+        Made something good? <a href={vonar.contributingUrl}>Send it in</a> and it can ship in a future version.
+      </p>
+    </li>
+  </ul>
+</section>
+
+<style>
+  .free {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 22px;
+    padding: 28px;
+  }
+
+  .c-mint {
+    background: var(--mint);
+    color: #3f4a45;
+  }
+
+  .c-sky {
+    background: var(--sky);
+    color: #3e4654;
+  }
+
+  .c-peach {
+    background: var(--peach);
+    color: #55433a;
+  }
+
+  h3 {
+    margin: 0;
+    color: var(--text);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  a {
+    color: var(--text);
+    font-weight: 600;
+    text-underline-offset: 3px;
+  }
+</style>

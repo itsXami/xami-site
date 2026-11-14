@@ -1,0 +1,1637 @@
+[
+  {
+    "name": "Acid Bath",
+    "category": "Bass",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Bass House Snarl",
+    "category": "Bass",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Big Room Saw Bass",
+    "category": "Bass",
+    "mood": "Medium"
+  },
+  {
+    "name": "Bitcrush Sub",
+    "category": "Bass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Boogie Bass",
+    "category": "Bass",
+    "mood": "Medium"
+  },
+  {
+    "name": "Cathedral Low End",
+    "category": "Bass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Clean 808",
+    "category": "Bass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Clipped 808",
+    "category": "Bass",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Concrete Saw",
+    "category": "Bass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Crushed Rage 808",
+    "category": "Bass",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Deep House Organ Bass",
+    "category": "Bass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Distorted Reese",
+    "category": "Bass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Drill Slide 808",
+    "category": "Bass",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Filter House Bass",
+    "category": "Bass",
+    "mood": "Medium"
+  },
+  {
+    "name": "FM Snarl Bass",
+    "category": "Bass",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Fold Glide 808",
+    "category": "Bass",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "French Disco Bass",
+    "category": "Bass",
+    "mood": "Medium"
+  },
+  {
+    "name": "Funk Slap Bass",
+    "category": "Bass",
+    "mood": "Medium"
+  },
+  {
+    "name": "Furnace Sub",
+    "category": "Bass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Future House Bass",
+    "category": "Bass",
+    "mood": "Medium"
+  },
+  {
+    "name": "Fuzz Bassline",
+    "category": "Bass",
+    "mood": "Dark"
+  },
+  {
+    "name": "G-Funk Rubber Bass",
+    "category": "Bass",
+    "mood": "Medium"
+  },
+  {
+    "name": "Grid FM Pulse",
+    "category": "Bass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Grid Pulse Bass",
+    "category": "Bass",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Grind Square Bass",
+    "category": "Bass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Gutter Growl",
+    "category": "Bass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Kick Sub Smash",
+    "category": "Bass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Long Glide 808",
+    "category": "Bass",
+    "mood": "Sad"
+  },
+  {
+    "name": "Mechanic Bass",
+    "category": "Bass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Modular Pluck Bass",
+    "category": "Bass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Overload 808",
+    "category": "Bass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Phaser Sweep Bass",
+    "category": "Bass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Praise Bass",
+    "category": "Bass",
+    "mood": "Medium"
+  },
+  {
+    "name": "Pulse Engine Bass",
+    "category": "Bass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Pure Sub",
+    "category": "Bass",
+    "mood": "Medium"
+  },
+  {
+    "name": "Rage 808 Distorted",
+    "category": "Bass",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Rivet Gun",
+    "category": "Bass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Rolling Tech Bass",
+    "category": "Bass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Round Analog Bass",
+    "category": "Bass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Rubber Square Line",
+    "category": "Bass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Rust Bass",
+    "category": "Bass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Shock Collar",
+    "category": "Bass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Shredder Reese",
+    "category": "Bass",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Simple Saw Bass",
+    "category": "Bass",
+    "mood": "Medium"
+  },
+  {
+    "name": "Sliding 808",
+    "category": "Bass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Slow Tears 808",
+    "category": "Bass",
+    "mood": "Sad"
+  },
+  {
+    "name": "Squelch Box",
+    "category": "Bass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Sync Punch Bass",
+    "category": "Bass",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Tom Drop 808",
+    "category": "Bass",
+    "mood": "Sad"
+  },
+  {
+    "name": "Trap 808 Punch",
+    "category": "Bass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Velvet Rope Bass",
+    "category": "Bass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Warehouse Filter Bass",
+    "category": "Bass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Acid Scream Lead",
+    "category": "Lead",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Bit Riot Lead",
+    "category": "Lead",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Chain Link Scream",
+    "category": "Lead",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Choir Solo Lead",
+    "category": "Lead",
+    "mood": "Soft"
+  },
+  {
+    "name": "Distorted Riff Saw",
+    "category": "Lead",
+    "mood": "Medium"
+  },
+  {
+    "name": "Eighties Solo Lead",
+    "category": "Lead",
+    "mood": "Medium"
+  },
+  {
+    "name": "Festival Saw Stab",
+    "category": "Lead",
+    "mood": "Medium"
+  },
+  {
+    "name": "Festival Sync Lead",
+    "category": "Lead",
+    "mood": "Medium"
+  },
+  {
+    "name": "Filter Sweep Lead",
+    "category": "Lead",
+    "mood": "Medium"
+  },
+  {
+    "name": "Formant Whistle",
+    "category": "Lead",
+    "mood": "Sad"
+  },
+  {
+    "name": "Glide Sine Lead",
+    "category": "Lead",
+    "mood": "Soft"
+  },
+  {
+    "name": "Gritty Riff Saw",
+    "category": "Lead",
+    "mood": "Medium"
+  },
+  {
+    "name": "Hoover Lead",
+    "category": "Lead",
+    "mood": "Medium"
+  },
+  {
+    "name": "Hyper Pluck Lead",
+    "category": "Lead",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Laser Harp",
+    "category": "Lead",
+    "mood": "Medium"
+  },
+  {
+    "name": "Lonely Whistle Lead",
+    "category": "Lead",
+    "mood": "Sad"
+  },
+  {
+    "name": "Machine Riff",
+    "category": "Lead",
+    "mood": "Medium"
+  },
+  {
+    "name": "Neon Anthem",
+    "category": "Lead",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Octave Bounce Lead",
+    "category": "Lead",
+    "mood": "Medium"
+  },
+  {
+    "name": "Phase Mod Lead",
+    "category": "Lead",
+    "mood": "Medium"
+  },
+  {
+    "name": "Plain Saw Lead",
+    "category": "Lead",
+    "mood": "Medium"
+  },
+  {
+    "name": "Portamento Whine Lead",
+    "category": "Lead",
+    "mood": "Medium"
+  },
+  {
+    "name": "Pulse Lead",
+    "category": "Lead",
+    "mood": "Medium"
+  },
+  {
+    "name": "Rage Synth Lead",
+    "category": "Lead",
+    "mood": "Medium"
+  },
+  {
+    "name": "Rave Siren Lead",
+    "category": "Lead",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Raw Filter Lead",
+    "category": "Lead",
+    "mood": "Medium"
+  },
+  {
+    "name": "Sinister Choir Lead",
+    "category": "Lead",
+    "mood": "Dark"
+  },
+  {
+    "name": "Sinister Saw Lead",
+    "category": "Lead",
+    "mood": "Dark"
+  },
+  {
+    "name": "Square Lead",
+    "category": "Lead",
+    "mood": "Medium"
+  },
+  {
+    "name": "Supersaw Lead",
+    "category": "Lead",
+    "mood": "Medium"
+  },
+  {
+    "name": "Tin Croon",
+    "category": "Lead",
+    "mood": "Sad"
+  },
+  {
+    "name": "Trance Gate Lead",
+    "category": "Lead",
+    "mood": "Medium"
+  },
+  {
+    "name": "Vocal Chop Stab",
+    "category": "Lead",
+    "mood": "Medium"
+  },
+  {
+    "name": "Zap Drop Lead",
+    "category": "Lead",
+    "mood": "Dark"
+  },
+  {
+    "name": "Banjo Pluck",
+    "category": "Guitar",
+    "mood": "Medium"
+  },
+  {
+    "name": "Bit Crushed Riff",
+    "category": "Guitar",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Bossa Nylon Guitar",
+    "category": "Guitar",
+    "mood": "Soft"
+  },
+  {
+    "name": "Chorused Clean Guitar",
+    "category": "Guitar",
+    "mood": "Soft"
+  },
+  {
+    "name": "Clean Bridge Guitar",
+    "category": "Guitar",
+    "mood": "Medium"
+  },
+  {
+    "name": "Clean Delay Lead Guitar",
+    "category": "Guitar",
+    "mood": "Medium"
+  },
+  {
+    "name": "Country Twang Guitar",
+    "category": "Guitar",
+    "mood": "Medium"
+  },
+  {
+    "name": "Crunch Rhythm Guitar",
+    "category": "Guitar",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Emo Guitar Pluck",
+    "category": "Guitar",
+    "mood": "Sad"
+  },
+  {
+    "name": "Feedback Sustain Guitar",
+    "category": "Guitar",
+    "mood": "Medium"
+  },
+  {
+    "name": "Fingerpicked Pattern Guitar",
+    "category": "Guitar",
+    "mood": "Soft"
+  },
+  {
+    "name": "Funk Scratch Guitar",
+    "category": "Guitar",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Fuzz Octave Lead",
+    "category": "Guitar",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Fuzzbox Bass Guitar",
+    "category": "Guitar",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Gospel Slide Guitar",
+    "category": "Guitar",
+    "mood": "Soft"
+  },
+  {
+    "name": "Harmonics Chime Guitar",
+    "category": "Guitar",
+    "mood": "Medium"
+  },
+  {
+    "name": "Harmony Twin Lead",
+    "category": "Guitar",
+    "mood": "Medium"
+  },
+  {
+    "name": "High Gain Lead Guitar",
+    "category": "Guitar",
+    "mood": "Medium"
+  },
+  {
+    "name": "Industrial Guitar Wall",
+    "category": "Guitar",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Lap Steel Glide",
+    "category": "Guitar",
+    "mood": "Medium"
+  },
+  {
+    "name": "Mandolin Tremolo",
+    "category": "Guitar",
+    "mood": "Medium"
+  },
+  {
+    "name": "Muted Disco Picking",
+    "category": "Guitar",
+    "mood": "Medium"
+  },
+  {
+    "name": "Nylon Pluck",
+    "category": "Guitar",
+    "mood": "Sad"
+  },
+  {
+    "name": "Overdrive Rhythm Guitar",
+    "category": "Guitar",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Palm Mute Chug",
+    "category": "Guitar",
+    "mood": "Dark"
+  },
+  {
+    "name": "Pedal Wah Lead",
+    "category": "Guitar",
+    "mood": "Dark"
+  },
+  {
+    "name": "Phaser Rhythm Guitar",
+    "category": "Guitar",
+    "mood": "Medium"
+  },
+  {
+    "name": "Rage Guitar Lead",
+    "category": "Guitar",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Rubber Bridge Guitar",
+    "category": "Guitar",
+    "mood": "Dark"
+  },
+  {
+    "name": "Searing Sustain Lead",
+    "category": "Guitar",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Sitar Buzz",
+    "category": "Guitar",
+    "mood": "Medium"
+  },
+  {
+    "name": "Slide Blues Guitar",
+    "category": "Guitar",
+    "mood": "Medium"
+  },
+  {
+    "name": "Ukulele Strum",
+    "category": "Guitar",
+    "mood": "Medium"
+  },
+  {
+    "name": "Bossa Organ Pluck",
+    "category": "Pluck",
+    "mood": "Medium"
+  },
+  {
+    "name": "Breath Bubble Pluck",
+    "category": "Pluck",
+    "mood": "Medium"
+  },
+  {
+    "name": "Classic Saw Pluck",
+    "category": "Pluck",
+    "mood": "Medium"
+  },
+  {
+    "name": "Clave Click Pluck",
+    "category": "Pluck",
+    "mood": "Medium"
+  },
+  {
+    "name": "Comb Tube Pluck",
+    "category": "Pluck",
+    "mood": "Medium"
+  },
+  {
+    "name": "Concert Harp",
+    "category": "Pluck",
+    "mood": "Soft"
+  },
+  {
+    "name": "Detroit Bounce Pluck",
+    "category": "Pluck",
+    "mood": "Medium"
+  },
+  {
+    "name": "Digital Bell Pluck",
+    "category": "Pluck",
+    "mood": "Medium"
+  },
+  {
+    "name": "Double Course Pluck",
+    "category": "Pluck",
+    "mood": "Medium"
+  },
+  {
+    "name": "Dub Echo Pluck",
+    "category": "Pluck",
+    "mood": "Dark"
+  },
+  {
+    "name": "FM Glass Pluck",
+    "category": "Pluck",
+    "mood": "Medium"
+  },
+  {
+    "name": "Future House Pluck",
+    "category": "Pluck",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Kalimba Thumb",
+    "category": "Pluck",
+    "mood": "Medium"
+  },
+  {
+    "name": "Koto Bend Pluck",
+    "category": "Pluck",
+    "mood": "Medium"
+  },
+  {
+    "name": "Metal Smash Stab",
+    "category": "Pluck",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Mirror Hollow Pluck",
+    "category": "Pluck",
+    "mood": "Medium"
+  },
+  {
+    "name": "Pain Pluck",
+    "category": "Pluck",
+    "mood": "Sad"
+  },
+  {
+    "name": "Pizz Hollow Pluck",
+    "category": "Pluck",
+    "mood": "Medium"
+  },
+  {
+    "name": "Plectrum Synth Pluck",
+    "category": "Pluck",
+    "mood": "Medium"
+  },
+  {
+    "name": "PWM Pluck",
+    "category": "Pluck",
+    "mood": "Medium"
+  },
+  {
+    "name": "Ring Clang Pluck",
+    "category": "Pluck",
+    "mood": "Medium"
+  },
+  {
+    "name": "Round Pluck",
+    "category": "Pluck",
+    "mood": "Soft"
+  },
+  {
+    "name": "Rubber Ladder Pluck",
+    "category": "Pluck",
+    "mood": "Medium"
+  },
+  {
+    "name": "Square Pluck",
+    "category": "Pluck",
+    "mood": "Medium"
+  },
+  {
+    "name": "Sub Sine Pluck",
+    "category": "Pluck",
+    "mood": "Dark"
+  },
+  {
+    "name": "Sync Zap Pluck",
+    "category": "Pluck",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Tech Perc Pluck",
+    "category": "Pluck",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Vowel Pluck",
+    "category": "Pluck",
+    "mood": "Soft"
+  },
+  {
+    "name": "Water Drop Pluck",
+    "category": "Pluck",
+    "mood": "Soft"
+  },
+  {
+    "name": "Wooden Pluck",
+    "category": "Pluck",
+    "mood": "Dark"
+  },
+  {
+    "name": "Bellows Harmonium",
+    "category": "Keys",
+    "mood": "Medium"
+  },
+  {
+    "name": "Boom Bap Jazz EP",
+    "category": "Keys",
+    "mood": "Medium"
+  },
+  {
+    "name": "Breaker Keys",
+    "category": "Keys",
+    "mood": "Dark"
+  },
+  {
+    "name": "Buzzy Combo Organ",
+    "category": "Keys",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Chicago Organ Stab",
+    "category": "Keys",
+    "mood": "Medium"
+  },
+  {
+    "name": "Chord Memory Stab",
+    "category": "Keys",
+    "mood": "Medium"
+  },
+  {
+    "name": "Chorus Tine EP",
+    "category": "Keys",
+    "mood": "Soft"
+  },
+  {
+    "name": "Classic EP",
+    "category": "Keys",
+    "mood": "Soft"
+  },
+  {
+    "name": "Cross Mod Keys",
+    "category": "Keys",
+    "mood": "Dark"
+  },
+  {
+    "name": "Crystal Keys",
+    "category": "Keys",
+    "mood": "Medium"
+  },
+  {
+    "name": "Dark Ballad Piano",
+    "category": "Keys",
+    "mood": "Sad"
+  },
+  {
+    "name": "Dark Trap Piano",
+    "category": "Keys",
+    "mood": "Dark"
+  },
+  {
+    "name": "Deep Echo Keys",
+    "category": "Keys",
+    "mood": "Dark"
+  },
+  {
+    "name": "Dream Keys",
+    "category": "Keys",
+    "mood": "Soft"
+  },
+  {
+    "name": "Dub Chord Stab",
+    "category": "Keys",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Dulcimer Keys",
+    "category": "Keys",
+    "mood": "Soft"
+  },
+  {
+    "name": "Electric Tine Keys",
+    "category": "Keys",
+    "mood": "Soft"
+  },
+  {
+    "name": "Felt Tine EP",
+    "category": "Keys",
+    "mood": "Soft"
+  },
+  {
+    "name": "Full Drawbar Organ",
+    "category": "Keys",
+    "mood": "Medium"
+  },
+  {
+    "name": "Funeral Organ",
+    "category": "Keys",
+    "mood": "Dark"
+  },
+  {
+    "name": "Funk Clav Keys",
+    "category": "Keys",
+    "mood": "Medium"
+  },
+  {
+    "name": "Funky Filter Keys",
+    "category": "Keys",
+    "mood": "Medium"
+  },
+  {
+    "name": "Garage Organ Stab",
+    "category": "Keys",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Glass Piano",
+    "category": "Keys",
+    "mood": "Dark"
+  },
+  {
+    "name": "Gloss Pluck",
+    "category": "Keys",
+    "mood": "Medium"
+  },
+  {
+    "name": "Grand Synth Keys",
+    "category": "Keys",
+    "mood": "Soft"
+  },
+  {
+    "name": "Hard House Stab",
+    "category": "Keys",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Honky Tonk Bar",
+    "category": "Keys",
+    "mood": "Soft"
+  },
+  {
+    "name": "Hoover Stab",
+    "category": "Keys",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "House Piano Stab",
+    "category": "Keys",
+    "mood": "Medium"
+  },
+  {
+    "name": "Marimba Keys",
+    "category": "Keys",
+    "mood": "Soft"
+  },
+  {
+    "name": "Muted Felt Upright",
+    "category": "Keys",
+    "mood": "Soft"
+  },
+  {
+    "name": "Nineties House Piano",
+    "category": "Keys",
+    "mood": "Medium"
+  },
+  {
+    "name": "Ooh Vowel Keys",
+    "category": "Keys",
+    "mood": "Soft"
+  },
+  {
+    "name": "Overdrive Rock Organ",
+    "category": "Keys",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Phaser Tremolo EP",
+    "category": "Keys",
+    "mood": "Soft"
+  },
+  {
+    "name": "Polysynth Chords",
+    "category": "Keys",
+    "mood": "Medium"
+  },
+  {
+    "name": "Rap Synth Stab",
+    "category": "Keys",
+    "mood": "Dark"
+  },
+  {
+    "name": "Rave Piano Stab",
+    "category": "Keys",
+    "mood": "Medium"
+  },
+  {
+    "name": "Reed Electric Piano",
+    "category": "Keys",
+    "mood": "Soft"
+  },
+  {
+    "name": "Reed Growl Keys",
+    "category": "Keys",
+    "mood": "Dark"
+  },
+  {
+    "name": "Sad Trap Piano",
+    "category": "Keys",
+    "mood": "Sad"
+  },
+  {
+    "name": "Saturated Keys Stab",
+    "category": "Keys",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Sidechain Organ",
+    "category": "Keys",
+    "mood": "Medium"
+  },
+  {
+    "name": "Slow Phaser Chords",
+    "category": "Keys",
+    "mood": "Soft"
+  },
+  {
+    "name": "Smoky Lounge Keys",
+    "category": "Keys",
+    "mood": "Dark"
+  },
+  {
+    "name": "Steel String Synth",
+    "category": "Keys",
+    "mood": "Medium"
+  },
+  {
+    "name": "String Clav",
+    "category": "Keys",
+    "mood": "Medium"
+  },
+  {
+    "name": "Sunday Drawbars",
+    "category": "Keys",
+    "mood": "Soft"
+  },
+  {
+    "name": "Synth Piano",
+    "category": "Keys",
+    "mood": "Medium"
+  },
+  {
+    "name": "Talk Synth Chords",
+    "category": "Keys",
+    "mood": "Medium"
+  },
+  {
+    "name": "Varsity Stabs",
+    "category": "Keys",
+    "mood": "Medium"
+  },
+  {
+    "name": "Wah Clav",
+    "category": "Keys",
+    "mood": "Medium"
+  },
+  {
+    "name": "Warm Percussion Organ",
+    "category": "Keys",
+    "mood": "Soft"
+  },
+  {
+    "name": "Balafon Buzz",
+    "category": "Bell",
+    "mood": "Medium"
+  },
+  {
+    "name": "Bowed Cymbal",
+    "category": "Bell",
+    "mood": "Dark"
+  },
+  {
+    "name": "Broken Bell",
+    "category": "Bell",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Church Bell Toll",
+    "category": "Bell",
+    "mood": "Dark"
+  },
+  {
+    "name": "Classic FM Bell",
+    "category": "Bell",
+    "mood": "Medium"
+  },
+  {
+    "name": "Crotale Ring",
+    "category": "Bell",
+    "mood": "Medium"
+  },
+  {
+    "name": "Detuned Lullaby",
+    "category": "Bell",
+    "mood": "Sad"
+  },
+  {
+    "name": "Drill Bell",
+    "category": "Bell",
+    "mood": "Dark"
+  },
+  {
+    "name": "Eerie Music Box",
+    "category": "Bell",
+    "mood": "Dark"
+  },
+  {
+    "name": "Gamelan Gong",
+    "category": "Bell",
+    "mood": "Dark"
+  },
+  {
+    "name": "Glockenspiel",
+    "category": "Bell",
+    "mood": "Soft"
+  },
+  {
+    "name": "Rosewood Marimba",
+    "category": "Bell",
+    "mood": "Soft"
+  },
+  {
+    "name": "Simple Bell",
+    "category": "Bell",
+    "mood": "Medium"
+  },
+  {
+    "name": "Steel Pan Melody",
+    "category": "Bell",
+    "mood": "Medium"
+  },
+  {
+    "name": "Temple Bell Strike",
+    "category": "Bell",
+    "mood": "Dark"
+  },
+  {
+    "name": "Trap Bell Melody",
+    "category": "Bell",
+    "mood": "Medium"
+  },
+  {
+    "name": "Tubular Bell",
+    "category": "Bell",
+    "mood": "Medium"
+  },
+  {
+    "name": "Bowed Metal Pad",
+    "category": "Pad",
+    "mood": "Medium"
+  },
+  {
+    "name": "Bright Poly Pad",
+    "category": "Pad",
+    "mood": "Medium"
+  },
+  {
+    "name": "Choir Pad",
+    "category": "Pad",
+    "mood": "Soft"
+  },
+  {
+    "name": "Choir Vowel Pad",
+    "category": "Pad",
+    "mood": "Soft"
+  },
+  {
+    "name": "Dark Pad",
+    "category": "Pad",
+    "mood": "Dark"
+  },
+  {
+    "name": "Deep Sub Pad",
+    "category": "Pad",
+    "mood": "Dark"
+  },
+  {
+    "name": "Distant Choir Pad",
+    "category": "Pad",
+    "mood": "Sad"
+  },
+  {
+    "name": "Filter Sweep Pad",
+    "category": "Pad",
+    "mood": "Medium"
+  },
+  {
+    "name": "Glass Pad",
+    "category": "Pad",
+    "mood": "Soft"
+  },
+  {
+    "name": "Haunted Choir Pad",
+    "category": "Pad",
+    "mood": "Dark"
+  },
+  {
+    "name": "House Pump Pad",
+    "category": "Pad",
+    "mood": "Medium"
+  },
+  {
+    "name": "Lilting Voice Pad",
+    "category": "Pad",
+    "mood": "Sad"
+  },
+  {
+    "name": "Neon Grid Pad",
+    "category": "Pad",
+    "mood": "Dark"
+  },
+  {
+    "name": "Notch Phaser Pad",
+    "category": "Pad",
+    "mood": "Medium"
+  },
+  {
+    "name": "Phaser Wash Pad",
+    "category": "Pad",
+    "mood": "Soft"
+  },
+  {
+    "name": "Vocal Ahh Pad",
+    "category": "Pad",
+    "mood": "Soft"
+  },
+  {
+    "name": "Vocoded Chords",
+    "category": "Pad",
+    "mood": "Soft"
+  },
+  {
+    "name": "Warm Saw Pad",
+    "category": "Pad",
+    "mood": "Soft"
+  },
+  {
+    "name": "Wavetable Drift Pad",
+    "category": "Pad",
+    "mood": "Dark"
+  },
+  {
+    "name": "Col Legno Taps",
+    "category": "Strings",
+    "mood": "Medium"
+  },
+  {
+    "name": "Crescendo Swell Strings",
+    "category": "Strings",
+    "mood": "Sad"
+  },
+  {
+    "name": "Dark Cello Line",
+    "category": "Strings",
+    "mood": "Dark"
+  },
+  {
+    "name": "Disco String Stab",
+    "category": "Strings",
+    "mood": "Medium"
+  },
+  {
+    "name": "Fiddle Folk",
+    "category": "Strings",
+    "mood": "Soft"
+  },
+  {
+    "name": "Low Octave Strings",
+    "category": "Strings",
+    "mood": "Dark"
+  },
+  {
+    "name": "Low String Section",
+    "category": "Strings",
+    "mood": "Dark"
+  },
+  {
+    "name": "Pizzicato Section",
+    "category": "Strings",
+    "mood": "Soft"
+  },
+  {
+    "name": "Solo Cello",
+    "category": "Strings",
+    "mood": "Soft"
+  },
+  {
+    "name": "Solo Violin",
+    "category": "Strings",
+    "mood": "Medium"
+  },
+  {
+    "name": "Staccato Strings",
+    "category": "Strings",
+    "mood": "Medium"
+  },
+  {
+    "name": "String Ensemble",
+    "category": "Strings",
+    "mood": "Medium"
+  },
+  {
+    "name": "Sul Ponticello",
+    "category": "Strings",
+    "mood": "Medium"
+  },
+  {
+    "name": "Synth Strings",
+    "category": "Strings",
+    "mood": "Medium"
+  },
+  {
+    "name": "Brass Section",
+    "category": "Brass",
+    "mood": "Medium"
+  },
+  {
+    "name": "Cinematic Low Brass",
+    "category": "Brass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Cold Brass Swell",
+    "category": "Brass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Distorted Fanfare",
+    "category": "Brass",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Gilded Horns",
+    "category": "Brass",
+    "mood": "Medium"
+  },
+  {
+    "name": "Orchestral Brass Stab",
+    "category": "Brass",
+    "mood": "Medium"
+  },
+  {
+    "name": "Riot Horn",
+    "category": "Brass",
+    "mood": "Dark"
+  },
+  {
+    "name": "Soft French Horn",
+    "category": "Brass",
+    "mood": "Sad"
+  },
+  {
+    "name": "Soft Horns",
+    "category": "Brass",
+    "mood": "Soft"
+  },
+  {
+    "name": "Synth Brass",
+    "category": "Brass",
+    "mood": "Medium"
+  },
+  {
+    "name": "Trap Brass Hit",
+    "category": "Brass",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Bassoon Low",
+    "category": "Woodwind",
+    "mood": "Soft"
+  },
+  {
+    "name": "Blues Harmonica",
+    "category": "Woodwind",
+    "mood": "Medium"
+  },
+  {
+    "name": "Concert Flute",
+    "category": "Woodwind",
+    "mood": "Soft"
+  },
+  {
+    "name": "Duduk Lament",
+    "category": "Woodwind",
+    "mood": "Sad"
+  },
+  {
+    "name": "Musette Accordion",
+    "category": "Woodwind",
+    "mood": "Soft"
+  },
+  {
+    "name": "Oboe Solo",
+    "category": "Woodwind",
+    "mood": "Soft"
+  },
+  {
+    "name": "Soprano Sax Smooth",
+    "category": "Woodwind",
+    "mood": "Soft"
+  },
+  {
+    "name": "Tenor Sax Growl",
+    "category": "Woodwind",
+    "mood": "Dark"
+  },
+  {
+    "name": "Acid Line Arp",
+    "category": "Arp",
+    "mood": "Medium"
+  },
+  {
+    "name": "Acid Rave Arp",
+    "category": "Arp",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Dark Trap Arp",
+    "category": "Arp",
+    "mood": "Dark"
+  },
+  {
+    "name": "Disco Octave Arp",
+    "category": "Arp",
+    "mood": "Medium"
+  },
+  {
+    "name": "Hard Trance Gate",
+    "category": "Arp",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "House Groove Arp",
+    "category": "Arp",
+    "mood": "Medium"
+  },
+  {
+    "name": "Night Drive Arp",
+    "category": "Arp",
+    "mood": "Dark"
+  },
+  {
+    "name": "Plucked Sequence",
+    "category": "Arp",
+    "mood": "Medium"
+  },
+  {
+    "name": "Pulsing String Ostinato",
+    "category": "Arp",
+    "mood": "Dark"
+  },
+  {
+    "name": "Racing Saw Arp",
+    "category": "Arp",
+    "mood": "Medium"
+  },
+  {
+    "name": "Sawblade Arp",
+    "category": "Arp",
+    "mood": "Medium"
+  },
+  {
+    "name": "Simple Up Arp",
+    "category": "Arp",
+    "mood": "Medium"
+  },
+  {
+    "name": "Skyline Arp",
+    "category": "Arp",
+    "mood": "Medium"
+  },
+  {
+    "name": "808 Boom Kick",
+    "category": "Drums",
+    "mood": "Dark"
+  },
+  {
+    "name": "Boom Bap Kick",
+    "category": "Drums",
+    "mood": "Medium"
+  },
+  {
+    "name": "Boom Bap Snare",
+    "category": "Drums",
+    "mood": "Medium"
+  },
+  {
+    "name": "Closed Hat Tick",
+    "category": "Drums",
+    "mood": "Medium"
+  },
+  {
+    "name": "Crunchy Shaker",
+    "category": "Drums",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Dark Room Snare",
+    "category": "Drums",
+    "mood": "Dark"
+  },
+  {
+    "name": "Deep Thud Kick",
+    "category": "Drums",
+    "mood": "Dark"
+  },
+  {
+    "name": "Dirty Crack Snare",
+    "category": "Drums",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Dry Tambourine",
+    "category": "Drums",
+    "mood": "Medium"
+  },
+  {
+    "name": "Dusty Closed Hat",
+    "category": "Drums",
+    "mood": "Dark"
+  },
+  {
+    "name": "Dusty Knock Kick",
+    "category": "Drums",
+    "mood": "Dark"
+  },
+  {
+    "name": "Finger Snap",
+    "category": "Drums",
+    "mood": "Soft"
+  },
+  {
+    "name": "Four Floor Kick",
+    "category": "Drums",
+    "mood": "Medium"
+  },
+  {
+    "name": "Groove Shaker",
+    "category": "Drums",
+    "mood": "Medium"
+  },
+  {
+    "name": "Hard Clipped Kick",
+    "category": "Drums",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Haunted Clap",
+    "category": "Drums",
+    "mood": "Dark"
+  },
+  {
+    "name": "House Clap",
+    "category": "Drums",
+    "mood": "Medium"
+  },
+  {
+    "name": "House Snare",
+    "category": "Drums",
+    "mood": "Medium"
+  },
+  {
+    "name": "Metal Hat",
+    "category": "Drums",
+    "mood": "Medium"
+  },
+  {
+    "name": "Open Hat Shimmer",
+    "category": "Drums",
+    "mood": "Medium"
+  },
+  {
+    "name": "Pedal Hat Chick",
+    "category": "Drums",
+    "mood": "Soft"
+  },
+  {
+    "name": "Snap Clap",
+    "category": "Drums",
+    "mood": "Medium"
+  },
+  {
+    "name": "Soft Egg Shaker",
+    "category": "Drums",
+    "mood": "Soft"
+  },
+  {
+    "name": "Tech Kick",
+    "category": "Drums",
+    "mood": "Medium"
+  },
+  {
+    "name": "Tight Rim Snare",
+    "category": "Drums",
+    "mood": "Medium"
+  },
+  {
+    "name": "Trap Clap",
+    "category": "Drums",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Trap Hat Roll",
+    "category": "Drums",
+    "mood": "Medium"
+  },
+  {
+    "name": "Trap Kick Punch",
+    "category": "Drums",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Trap Open Hat",
+    "category": "Drums",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Trap Snare",
+    "category": "Drums",
+    "mood": "Medium"
+  },
+  {
+    "name": "Wide Disco Clap",
+    "category": "Drums",
+    "mood": "Medium"
+  },
+  {
+    "name": "Wood Block Knock",
+    "category": "Drums",
+    "mood": "Medium"
+  },
+  {
+    "name": "Choir Hit",
+    "category": "FX",
+    "mood": "Soft"
+  },
+  {
+    "name": "Dark Drone",
+    "category": "FX",
+    "mood": "Dark"
+  },
+  {
+    "name": "Dark Orchestra Hit",
+    "category": "FX",
+    "mood": "Dark"
+  },
+  {
+    "name": "Distorted Impact",
+    "category": "FX",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Glitch Stutter",
+    "category": "FX",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Grinding Sweep",
+    "category": "FX",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Impact Downlifter",
+    "category": "FX",
+    "mood": "Dark"
+  },
+  {
+    "name": "Laser Gun Zap",
+    "category": "FX",
+    "mood": "Aggressive"
+  },
+  {
+    "name": "Laser Zap",
+    "category": "FX",
+    "mood": "Dark"
+  },
+  {
+    "name": "White Noise Riser",
+    "category": "FX",
+    "mood": "Aggressive"
+  }
+]
