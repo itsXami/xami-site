@@ -1,0 +1,93 @@
+---
+import Page from '../layouts/Page.astro';
+import { vonar } from '../data/vonar';
+
+const contact = 'xami.sound@gmail.com';
+---
+
+<Page
+  title="Legal – privacy and terms · Xami"
+  description="Privacy notice and terms of use for the Xami website and its free plugins and presets."
+  eyebrow="Legal"
+  heading="Privacy and terms."
+  headingMuted="In plain words."
+>
+  <p>Last updated: 14 November 2026.</p>
+
+  <section class="card-block" aria-labelledby="privacy">
+    <h2 id="privacy">Privacy</h2>
+
+    <h3>Who is responsible</h3>
+    <p>
+      The controller of this website is Xami, contact: <a href={`mailto:${contact}`}>{contact}</a>. The name and
+      address of the responsible person will be provided on a justified request.
+    </p>
+
+    <h3>What is processed and why</h3>
+    <p>
+      This site is a set of static pages with no accounts, forms or comments. When you open a page, the hosting
+      provider, Cloudflare, processes your IP address and technical details of the request (such as the page
+      requested, the time and your browser's user agent). This is needed to deliver the site to you and to keep it
+      secure, for example to block attacks.
+    </p>
+    <p>
+      The legal basis is our legitimate interest in running a working and secure website (Art. 6(1)(f) GDPR). You
+      do not have to provide any data, but without your IP address the site cannot be delivered to your browser.
+    </p>
+
+    <h3>Statistics</h3>
+    <p>[DO UZUPEŁNIENIA] Cloudflare Web Analytics: whether it is enabled and in which mode (to be checked in the
+      Cloudflare dashboard before publication).</p>
+
+    <h3>Cookies</h3>
+    <p>
+      This site does not use cookies or similar technologies. Nothing is stored on your device, and the audio
+      player does not remember any settings.
+    </p>
+
+    <h3>Who receives the data</h3>
+    <p>
+      Cloudflare, Inc. hosts this site and processes the data on our behalf as a processor. Cloudflare may process
+      data in the United States. Transfers are based on the EU-U.S. Data Privacy Framework, under which Cloudflare
+      is certified, and additionally on the standard contractual clauses in Cloudflare's data processing addendum.
+    </p>
+    <p>
+      Download buttons lead to files hosted on GitHub. When you download a file or follow a link to GitHub, GitHub
+      processes your data as a separate controller under its own privacy statement.
+    </p>
+
+    <h3>How long</h3>
+    <p>Request data is kept only as long as set out in Cloudflare's policies for its services. We do not keep any copy.</p>
+
+    <h3>Your rights</h3>
+    <p>
+      You have the right to access your data, to have it corrected or erased, to restrict its processing and to
+      object to it on grounds relating to your particular situation. To use these rights, write to{' '}
+      <a href={`mailto:${contact}`}>{contact}</a>. You also have the right to lodge a complaint with the
+      supervisory authority, the President of the Personal Data Protection Office (Prezes Urzędu Ochrony Danych
+      Osobowych, ul. Stawki 2, 00-193 Warszawa, Poland).
+    </p>
+    <p>No automated decision-making or profiling takes place.</p>
+  </section>
+
+  <section class="card-block" aria-labelledby="terms">
+    <h2 id="terms">Terms</h2>
+    <ul>
+      <li>All plugins and presets on this site are free. No account or payment is needed.</li>
+      <li>
+        They are provided “as is”, without any warranty. Use them at your own risk. See sections 15 and 16 of the
+        licence.
+      </li>
+      <li>
+        Vonar is free software under the GNU Affero General Public License, version 3 (<a href={vonar.licenseUrl}
+          >LICENSE</a
+        >). The music and sounds you make with it are yours.
+      </li>
+      <li>
+        The name “Vonar” and its logo are not covered by the licence. Distribute modified versions under a different
+        name and logo.
+      </li>
+      <li>VST is a trademark of Steinberg Media Technologies GmbH.</li>
+    </ul>
+  </section>
+</Page>
