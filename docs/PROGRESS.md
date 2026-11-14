@@ -6,19 +6,39 @@ Ten plik wystarcza, żeby nowa sesja mogła kontynuować pracę. Zasady i decyzj
 
 | # | Etap | Status |
 |---|------|--------|
-| 1 | Szkielet Astro + publikacja na Cloudflare Pages | ⏳ następny |
+| 1 | Szkielet Astro + publikacja na Cloudflare Pages | 🔄 kod gotowy (PR), czeka na podłączenie Cloudflare Pages |
 | 2 | Strona Vonara (makieta A) | — |
 | 3 | Dema audio (12 presetów) | — |
 | 4 | Wykończenie: `/legal` i „Lista przed publikacją” | — |
 
+## Etap 1 — co jest w repo
+
+- Astro 7.4.12 (statyczny build, `output: 'static'`), `build.inlineStylesheets: 'never'`.
+- Zależności (wersje przypięte dokładnie): `astro`, `@fontsource/inter`, `@fontsource/inter-tight`.
+  `package-lock.json` w repo, instalacja przez `npm ci`.
+- Node 22.23.4 w `.node-version` (wymóg Astro 7; czyta go CI i Cloudflare Pages).
+- Strona startowa `src/pages/index.astro`: tytuł „Xami” + jedno zdanie. Bez wyglądu z makiety (Etap 2).
+- Czcionki: Inter 400/500/600, Inter Tight 800/900 z Fontsource, bundlowane do `/_astro/` (bez Google Fonts).
+- `public/_headers` — dokładnie jak w `CLAUDE.md`.
+- `scripts/check-links.mjs` — sprawdzanie linków wewnętrznych w `dist/` (bez zależności): `npm run check-links`.
+- CI `.github/workflows/ci.yml`: job „Build and check links” (`npm ci`, `npm run build`, linki)
+  i „Secret scan (gitleaks)” (gitleaks 8.30.1, plik sprawdzany sumą SHA-256, skan całej historii).
+  `permissions: contents: read`, akcje przypięte do pełnego SHA.
+- `.github/dependabot.yml` — co tydzień `npm` i `github-actions`.
+
+Ustawienia Cloudflare Pages przy podłączaniu repo: framework preset „Astro”, build command
+`npm run build`, output `dist`. Wersję Node Cloudflare bierze z `.node-version`.
+
 ## Dziennik
 
 - 2026-11-14: repo założone; pierwszy commit z `CLAUDE.md`, README, `.gitignore` i tym plikiem.
+- 2026-11-14: Etap 1 — szkielet Astro, czcionki, `_headers`, CI (build, linki, gitleaks), Dependabot.
 
 ## Do zrobienia przez użytkownika
 
 - Reguła ochrony `main` (PR wymagany, 0 zatwierdzeń, CI musi przejść, zakaz force-push i usuwania).
 - Settings → Advanced Security: secret scanning z push protection, Dependabot alerts i security
   updates, Private vulnerability reporting.
-- Konto Cloudflare (passkey/2FA) — podłączenie repo po etapie 1.
+- Konto Cloudflare (passkey/2FA) — podłączenie repo po scaleniu PR etapu 1 (ustawienia wyżej).
+- Dodać joby CI jako wymagane w regule `main` (nazwy w opisie PR etapu 1).
 - Lista 12 presetów do dem — przed etapem 3.
