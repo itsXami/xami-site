@@ -92,7 +92,7 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
 
 | # | Punkt | Status |
 |---|---|---|
-| 1 | Polityka prywatności | ✅ `/legal/` — ⚠️ akapit o statystykach `[DO UZUPEŁNIENIA]` (użytkownik) |
+| 1 | Polityka prywatności | ✅ `/legal/` (akapit o Web Analytics uzupełniony 2026-11-14) |
 | 2 | Regulamin | ✅ `/legal/` |
 | 3 | Brak sekretów | ✅ gitleaks w CI; strona bez kluczy |
 | 4 | HTTPS | ✅ Cloudflare Pages + HSTS w `_headers`; linki `https://` |
@@ -110,12 +110,13 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
 | 16 | Zepsute linki | ✅ wewnętrzne w CI; ⚠️ zewnętrzne — sprawdzić raz przed publikacją |
 | 17 | Walidacja formularzy | ➖ nie dotyczy (brak formularzy) |
 | 18 | Ochrona przed spamem | ➖ nie dotyczy |
-| 19 | Statystyki | ⚠️ użytkownik: włączyć/sprawdzić Cloudflare Web Analytics, potem uzupełnić `/legal/` |
+| 19 | Statystyki | ✅ Cloudflare Web Analytics włączone przez użytkownika w projekcie Pages (2026-11-14); ⚠️ sprawdzić w konsoli przeglądarki brak błędów CSP i tryb dla odwiedzających z UE |
 | 20 | Jedno wezwanie do działania | ✅ „Download” |
 
 ## Do zrobienia przez użytkownika (przed ogłoszeniem strony)
 
-- Cloudflare → Web Analytics: sprawdzić, czy jest włączone i w jakim trybie; napisać Claude, żeby uzupełnił `/legal/`.
+- Web Analytics (włączone): po wdrożeniu otworzyć produkcję z konsolą (F12) i sprawdzić brak błędów CSP; sprawdzić
+  w panelu, czy jest opcja pomijania odwiedzających z UE, i dać znać, jeśli trzeba dopisać to w `/legal/`.
 - Podglądy PR: Cloudflare Access (Zero Trust, darmowe) albo wyłączenie podglądów.
 - Repo `xami-site` i `vonar`: Settings → Advanced Security — secret scanning z push protection, Dependabot alerts
   i security updates, **Private vulnerability reporting** (potrzebne dla `security.txt` i `SECURITY.md`).
@@ -138,3 +139,4 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
 - 2026-11-14: Etap 4 (3) — `/legal` i strona 404.
 - 2026-11-14: Etap 4 (4) — favicon, obraz podglądu linku, sitemap, robots.txt.
 - 2026-11-14: Etap 4 (5) — Lighthouse w CI, `security.txt`, `SECURITY.md`, plan awaryjny; status 20 punktów.
+- 2026-11-14: Etap 4 (6) — Web Analytics włączone (użytkownik), `/legal/` uzupełnione.
