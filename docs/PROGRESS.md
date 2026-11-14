@@ -26,19 +26,17 @@ Ten plik wystarcza, żeby nowa sesja mogła kontynuować pracę. Zasady i decyzj
   `permissions: contents: read`, akcje przypięte do pełnego SHA.
 - `.github/dependabot.yml` — co tydzień `npm` i `github-actions`.
 
-Ustawienia Cloudflare Pages przy podłączaniu repo: framework preset „Astro”, build command
+Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawienia: framework preset „Astro”, build command
 `npm run build`, output `dist`. Wersję Node Cloudflare bierze z `.node-version`.
 
 ## Dziennik
 
 - 2026-11-14: repo założone; pierwszy commit z `CLAUDE.md`, README, `.gitignore` i tym plikiem.
-- 2026-11-14: Etap 1 — szkielet Astro, czcionki, `_headers`, CI (build, linki, gitleaks), Dependabot.
+- 2026-11-14: Etap 1 — szkielet Astro, czcionki, `_headers`, CI (build, linki, gitleaks), Dependabot (PR #1).
+- 2026-11-14: reguła `main` z wymaganymi jobami CI; projekt Cloudflare Pages `xami-sound`, adres `xami-sound.pages.dev`.
 
 ## Do zrobienia przez użytkownika
 
-- Reguła ochrony `main` (PR wymagany, 0 zatwierdzeń, CI musi przejść, zakaz force-push i usuwania).
 - Settings → Advanced Security: secret scanning z push protection, Dependabot alerts i security
   updates, Private vulnerability reporting.
-- Konto Cloudflare (passkey/2FA) — podłączenie repo po scaleniu PR etapu 1 (ustawienia wyżej).
-- Dodać joby CI jako wymagane w regule `main` (nazwy w opisie PR etapu 1).
 - Lista 12 presetów do dem — przed etapem 3.
