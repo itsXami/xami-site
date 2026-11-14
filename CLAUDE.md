@@ -292,5 +292,7 @@ Każdy punkt musi być spełniony przed pierwszą publikacją i sprawdzany przy 
   Teraz wyłącza je tylko `prefers-reduced-motion`. Do rozważenia przycisk „Pause animations” (Etap 4, audyt dostępności).
 - ~~Zakładka „Presets” w galerii~~ — zrzut otwartego menu presetów od użytkownika (2026-11-14). Liczby w menu
   obejmują też presety użytkownika (razem 336), więc przy nowej wersji zrobić zrzut na czystej instalacji.
+- Pasek boczny / lista pluginów (pomysł użytkownika, 2026-11-14): odłożone do drugiego produktu. Teraz linki
+  do podstron w menu u góry i w stopce; przy drugim produkcie menu „Plugins” i kafelki na stronie głównej.
 - Newsletter (później): polityka prywatności rozszerzona o dane subskrybentów, regulamin newslettera,
   niezaznaczony checkbox zgody, double opt-in, link wypisania, ochrona przed spamem (punkty 17–18).

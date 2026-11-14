@@ -19,6 +19,11 @@ export const vonar = {
     // 4,551,918 bytes.
     sizeLabel: '4.6 MB',
   },
+  zip: {
+    fileName: `Vonar-${version}-Windows-x64.zip`,
+    url: `https://github.com/itsXami/vonar/releases/download/v${version}/Vonar-${version}-Windows-x64.zip`,
+  },
+  guidePath: '/vonar/getting-started/',
   platform: 'Windows 10/11',
   format: 'VST3',
   presetCount: presets.length,

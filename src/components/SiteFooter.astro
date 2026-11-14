@@ -1,5 +1,9 @@
+---
+import { vonar } from '../data/vonar';
+---
+
 <footer class="site-footer wrap">
-  <span>Vonar by Xami · AGPLv3</span>
+  <span>Vonar by Xami · AGPLv3 · <a href={vonar.guidePath}>Installation guide</a></span>
   <span>VST is a trademark of Steinberg Media Technologies GmbH.</span>
 </footer>
 
@@ -14,5 +18,10 @@
     border-top: 1px solid var(--line);
     font-size: 14px;
     color: var(--text-3);
+  }
+
+  a {
+    color: var(--text-2);
+    text-underline-offset: 3px;
   }
 </style>

@@ -10,9 +10,12 @@ const { installer } = vonar;
         <h2 id="download-title">Download Vonar.</h2>
         <p class="sub">Free for {vonar.platform} · {vonar.format} · v{vonar.version}</p>
       </div>
-      <a class="btn btn--accent get" href={installer.url}>
-        Get the installer<span class="visually-hidden"> ({installer.fileName}, {installer.sizeLabel})</span>
-      </a>
+      <div class="buttons">
+        <a class="btn btn--accent get" href={installer.url}>
+          Get the installer<span class="visually-hidden"> ({installer.fileName}, {installer.sizeLabel})</span>
+        </a>
+        <a class="btn guide" href={vonar.guidePath}>Installation guide</a>
+      </div>
     </div>
 
     <dl class="facts">
@@ -31,13 +34,14 @@ const { installer } = vonar;
       must match the SHA-256 above.
     </p>
     <p class="note">
-      The installer is not code-signed, so Windows may show a SmartScreen warning. Choose “More info” → “Run anyway”.
+      The installer is not code-signed, so Windows may show a SmartScreen warning. Choose “More info” → “Run anyway”.{' '}
+      <a href={vonar.guidePath}>Step-by-step installation guide</a>
     </p>
     <p class="note">
       Official downloads are only available from this site and the GitHub repository. Any other site is unofficial.
     </p>
     <p class="note">
-      Source code: <a href={vonar.repoUrl}>github.com/itsXami/vonar</a> (<a href={vonar.licenseUrl}>AGPLv3</a>) ·
+      Source code: <a href={vonar.repoUrl}>github.com/itsXami/vonar</a> (<a href={vonar.licenseUrl}>AGPLv3</a>) ·{' '}
       <a href={vonar.releaseUrl}>Release notes for v{vonar.version}</a>
     </p>
   </div>
@@ -89,9 +93,28 @@ const { installer } = vonar;
     color: #b3b3b3;
   }
 
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
   .get {
     font-size: 18px;
     padding: 20px 32px;
+  }
+
+  .guide {
+    font-size: 18px;
+    padding: 18px 30px;
+    border: 2px solid #5a5a5a;
+    color: #fff;
+  }
+
+  @media (hover: hover) {
+    .guide:hover {
+      border-color: #fff;
+    }
   }
 
   .facts {

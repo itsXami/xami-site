@@ -1,0 +1,315 @@
+---
+import Base from '../../layouts/Base.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import { vonar } from '../../data/vonar';
+
+// Steps follow "Installing in FL Studio" and "Quick guide" in the Vonar README.
+const { installer, zip } = vonar;
+---
+
+<Base
+  title="Install Vonar in FL Studio – step-by-step guide · Xami"
+  description="How to install the free Vonar synth (VST3, Windows): download, the Windows SmartScreen warning, the installer, finding Vonar in FL Studio, presets and macros."
+>
+  <SiteHeader />
+  <main id="main" class="guide wrap">
+    <header class="intro">
+      <p class="eyebrow">Installation guide</p>
+      <h1 class="display">Install Vonar.<span class="muted">Step by step.</span></h1>
+      <p class="lead">
+        {`From download to your first sound in FL Studio. Vonar is a ${vonar.format} plugin for ${vonar.platform} (64-bit).`}
+      </p>
+    </header>
+
+    <ol class="steps">
+      <li class="step">
+        <span class="num" aria-hidden="true">1</span>
+        <div class="body">
+          <h2>Download the installer</h2>
+          <p>
+            Get <strong>{installer.fileName}</strong> ({installer.sizeLabel}). It comes straight from the{' '}
+            <a href={vonar.releaseUrl}>GitHub release</a>.
+          </p>
+          <p><a class="btn btn--primary" href={installer.url}>Download {installer.fileName}</a></p>
+          <details>
+            <summary>Optional: check that the file is genuine</summary>
+            <p>Open PowerShell in your Downloads folder and run:</p>
+            <pre><code>Get-FileHash .\{installer.fileName} -Algorithm SHA256</code></pre>
+            <p>The result must be exactly:</p>
+            <pre><code class="hash">{installer.sha256}</code></pre>
+            <p>
+              Official downloads are only available from this site and the GitHub repository. Any other site is
+              unofficial.
+            </p>
+          </details>
+        </div>
+      </li>
+
+      <li class="step">
+        <span class="num" aria-hidden="true">2</span>
+        <div class="body">
+          <h2 id="smartscreen">If Windows shows a blue “Windows protected your PC” window</h2>
+          <p>
+            This is Windows SmartScreen. It appears because the installer is not signed with a paid code-signing
+            certificate, not because something is wrong with the file. Vonar is free and its full source code is{' '}
+            <a href={vonar.repoUrl}>public on GitHub</a>.
+          </p>
+          <div class="callout">
+            <p class="callout-title">What to click</p>
+            <ol>
+              <li>Click <strong>More info</strong> (small text under the message).</li>
+              <li>
+                Check that the app name is <strong>{installer.fileName}</strong>. “Unknown publisher” is normal for
+                an unsigned file.
+              </li>
+              <li>Click <strong>Run anyway</strong>.</li>
+            </ol>
+          </div>
+          <p>Not sure? Check the SHA-256 in step 1 first. If it matches, the file is the one published here.</p>
+        </div>
+      </li>
+
+      <li class="step">
+        <span class="num" aria-hidden="true">3</span>
+        <div class="body">
+          <h2>Run the installer</h2>
+          <p>
+            Follow the wizard: licence → install → finish. The plugin goes to{' '}
+            <code>C:\Program Files\Common Files\VST3\Vonar.vst3</code>, where every DAW looks for it. To remove it
+            later, use <strong>Settings → Apps</strong>.
+          </p>
+          <p class="aside">
+            Prefer no installer? Download <a href={zip.url}>{zip.fileName}</a> and copy the whole{' '}
+            <code>Vonar.vst3</code> folder to the same place.
+          </p>
+        </div>
+      </li>
+
+      <li class="step">
+        <span class="num" aria-hidden="true">4</span>
+        <div class="body">
+          <h2>Find Vonar in FL Studio</h2>
+          <ol class="sub">
+            <li>Open <strong>Options → Manage plugins</strong> and click <strong>Find installed plugins</strong>.</li>
+            <li>
+              Vonar appears under <strong>Generators</strong> (vendor: Vonar). Tick the star to show it in the
+              instrument menu.
+            </li>
+            <li>In the <strong>Channel Rack</strong> click <strong>+</strong> and choose <strong>Vonar</strong>.</li>
+          </ol>
+        </div>
+      </li>
+
+      <li class="step">
+        <span class="num" aria-hidden="true">5</span>
+        <div class="body">
+          <h2>Pick a preset</h2>
+          <p>
+            Use the preset bar at the top of the Vonar window, not FL Studio's preset menu. Click the name to open
+            the menu grouped by category, use the <strong>&lt; &gt;</strong> arrows to step through presets, or
+            filter by category, mood and tag, and search.
+          </p>
+        </div>
+      </li>
+
+      <li class="step">
+        <span class="num" aria-hidden="true">6</span>
+        <div class="body">
+          <h2>Turn the macros</h2>
+          <p>
+            The four <strong>MACROS</strong> knobs at the bottom change the character of each preset. Drag a knob
+            up or down, hold <strong>Shift</strong> for fine steps, and double-click to reset it. Your sound, preset
+            name and macro labels are saved in the FL Studio project.
+          </p>
+        </div>
+      </li>
+    </ol>
+
+    <section class="more" aria-labelledby="more-title">
+      <h2 id="more-title">Good to know</h2>
+      <ul>
+        <li>
+          <strong>Your own presets</strong> (saved with <strong>SAVE</strong>) are JSON files in{' '}
+          <code>%APPDATA%\Vonar\Presets</code>. After copying presets from another computer, choose{' '}
+          <em>Rescan user presets</em> in the preset menu.
+        </li>
+        <li>
+          <strong>Coming from VOLT?</strong> Vonar was called VOLT during development. The installer removes the old{' '}
+          <code>VOLT.vst3</code>, projects made with VOLT still open, and your presets are copied over.
+        </li>
+        <li><strong>Windows only.</strong> Vonar is a 64-bit (x64) VST3 plugin. There is no macOS or ARM64 build.</li>
+      </ul>
+      <p><a class="btn btn--primary" href={installer.url}>Download Vonar v{vonar.version}</a></p>
+    </section>
+  </main>
+  <SiteFooter />
+</Base>
+
+<style>
+  .guide {
+    max-width: 840px;
+    padding-top: clamp(32px, 6vw, 56px);
+    padding-bottom: 80px;
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .lead {
+    margin: 0;
+    font-size: clamp(18px, 2.2vw, 20px);
+    color: var(--text-2);
+  }
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: clamp(14px, 3vw, 24px);
+    background: var(--card);
+    border-radius: 22px;
+    padding: clamp(20px, 3vw, 28px);
+  }
+
+  .num {
+    flex: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--text);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  .body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  h2 {
+    margin: 6px 0 8px;
+    color: var(--text);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(22px, 3vw, 26px);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    scroll-margin-top: 24px;
+  }
+
+  .body p,
+  .body li,
+  .more p,
+  .more li {
+    font-size: 17px;
+    color: var(--text-2);
+  }
+
+  .body p,
+  .more p {
+    margin: 0 0 12px;
+  }
+
+  strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  a:not(.btn) {
+    color: var(--text);
+    font-weight: 600;
+    text-underline-offset: 3px;
+  }
+
+  code {
+    font-family: ui-monospace, 'Cascadia Mono', Consolas, monospace;
+    font-size: 0.9em;
+    overflow-wrap: anywhere;
+  }
+
+  pre {
+    margin: 0 0 12px;
+    padding: 14px 16px;
+    border-radius: 12px;
+    background: var(--text);
+    color: #fff;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+
+  details {
+    margin-top: 4px;
+  }
+
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text);
+    padding: 8px 0;
+  }
+
+  details[open] summary {
+    margin-bottom: 8px;
+  }
+
+  .callout {
+    margin: 4px 0 12px;
+    padding: 18px 20px;
+    border-radius: 16px;
+    background: #fff;
+  }
+
+  .body .callout-title {
+    margin: 0 0 6px;
+    color: var(--eyebrow);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .callout ol,
+  .sub {
+    margin: 0;
+    padding-left: 22px;
+  }
+
+  .callout li + li,
+  .sub li + li {
+    margin-top: 6px;
+  }
+
+  .aside {
+    font-size: 15px;
+  }
+
+  .more {
+    margin-top: 40px;
+  }
+
+  .more ul {
+    margin: 0 0 24px;
+    padding-left: 20px;
+  }
+
+  .more li + li {
+    margin-top: 10px;
+  }
+</style>
