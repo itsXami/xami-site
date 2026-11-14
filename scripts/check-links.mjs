@@ -47,7 +47,7 @@ async function resolveTarget(urlPath) {
 function extractRefs(content, ext) {
   const refs = [];
   if (ext === '.html') {
-    for (const m of content.matchAll(/\s(?:href|src)\s*=\s*["']([^"']*)["']/gi)) refs.push(m[1]);
+    for (const m of content.matchAll(/\s(?:href|src|data-src)\s*=\s*["']([^"']*)["']/gi)) refs.push(m[1]);
     for (const m of content.matchAll(/\ssrcset\s*=\s*["']([^"']*)["']/gi)) {
       for (const part of m[1].split(',')) refs.push(part.trim().split(/\s+/)[0]);
     }
