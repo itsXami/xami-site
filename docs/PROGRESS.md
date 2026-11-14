@@ -8,8 +8,8 @@ Ten plik wystarcza, żeby nowa sesja mogła kontynuować pracę. Zasady i decyzj
 |---|------|--------|
 | 1 | Szkielet Astro + publikacja na Cloudflare Pages | ✅ gotowe |
 | 2 | Strona Vonara (makieta A) | ✅ gotowe |
-| 3 | Dema audio (12 presetów) | ⏳ następny (czeka na listę 12 presetów) |
-| 4 | Wykończenie: `/legal` i „Lista przed publikacją” | — |
+| 3 | Dema audio (12 presetów) | ✅ gotowe |
+| 4 | Wykończenie: `/legal` i „Lista przed publikacją” | ⏳ następny |
 
 ## Etap 1 — co jest w repo
 
@@ -48,6 +48,22 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
   przy 375 px, zakładki działają klawiszami strzałek.
 - Poprawka faktu: Vonar ma 7 trybów warp (plus „Off”), nie 8 — poprawione w `CLAUDE.md`.
 
+## Etap 3 — co jest w repo
+
+- Wybór użytkownika (12 presetów): `src/data/vonar-demo-picks.json` — Distorted Reese, Rave Siren Lead,
+  Harmony Twin Lead, Dream Keys, House Piano Stab, Church Bell Toll, House Pump Pad, Neon Grid Pad,
+  Distorted Fanfare, Bassoon Low, Acid Line Arp, 808 Boom Kick (9 kategorii plus Lead i Guitar).
+- Dema: podglądy FLAC z `VOLT_Render --preset "<nazwa>"` (Vonar v1.0.0), zamienione na MP3 128 kb/s, 48 kHz,
+  bez zmiany głośności i bez metadanych. Pliki w `public/audio/vonar/` (12 plików, ok. 0,8 MB).
+  Odtworzenie: `node scripts/build-vonar-demos.mjs <katalog wyjścia renderera>` — robi MP3
+  i `src/data/vonar-demos.json` (nazwa, kategoria z JSON presetu, ścieżka). Strona czyta tylko ten plik.
+- Odtwarzacz (`src/components/Sounds.astro`, `src/scripts/demos.ts`): jeden dźwięk naraz, play/stop,
+  filtr kategorii (przyciski `aria-pressed`, komunikat dla czytnika ekranu), audio pobierane dopiero po
+  kliknięciu „play”, nic nie zapisuje na urządzeniu.
+- Sprawdzone w Playwright z CSP: brak pobrań MP3 przed kliknięciem, jeden dźwięk naraz, stop, filtr, obsługa
+  klawiaturą, koniec dźwięku resetuje przycisk, zero błędów w konsoli, pusty localStorage i ciasteczka,
+  brak przewijania w bok przy 375 px. Sprawdzanie linków obejmuje też ścieżki MP3 (`data-src`).
+
 ## Dziennik
 
 - 2026-11-14: repo założone; pierwszy commit z `CLAUDE.md`, README, `.gitignore` i tym plikiem.
@@ -55,9 +71,9 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
 - 2026-11-14: reguła `main` z wymaganymi jobami CI; projekt Cloudflare Pages `xami-sound`, adres `xami-sound.pages.dev`.
 - 2026-11-14: Etap 1 zakończony (produkcja i podgląd PR działają). Od teraz Claude scala PR sam przy zielonym CI i podglądzie.
 - 2026-11-14: Etap 2 — strona Vonara według makiety A, zrzuty z aktualnej wersji, link do pliku i SHA-256.
+- 2026-11-14: Etap 3 — 12 dem audio (wybór użytkownika, Rave Siren Lead zamiast Fuzz Bassline), odtwarzacz z filtrem.
 
 ## Do zrobienia przez użytkownika
 
 - Settings → Advanced Security: secret scanning z push protection, Dependabot alerts i security
   updates, Private vulnerability reporting.
-- Lista 12 presetów do dem — przed etapem 3.

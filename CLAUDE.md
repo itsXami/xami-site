@@ -275,8 +275,8 @@ Każdy punkt musi być spełniony przed pierwszą publikacją i sprawdzany przy 
 
 ## Otwarte
 
-- ~~Ile dem~~ — zdecydowane: **12 presetów wybranych przez użytkownika**. Lista nazw do uzupełnienia
-  przed etapem 3; nazwy i kategorie sprawdzić w plikach JSON presetów Vonara.
+- ~~Ile dem~~ — zdecydowane: **12 presetów wybranych przez użytkownika** (2026-11-14), lista
+  w `src/data/vonar-demo-picks.json`.
 - ~~Adres strony~~ — zdecydowane: `xami-sound.pages.dev`.
 - ~~E-mail projektu~~ — założony: `xami.sound@gmail.com`.
 - ~~Tożsamość administratora w Privacy~~ — zdecydowane: „Xami” + `xami.sound@gmail.com` + zdanie,

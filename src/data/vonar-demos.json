@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Distorted Reese",
+    "category": "Bass",
+    "src": "/audio/vonar/distorted-reese.mp3"
+  },
+  {
+    "name": "Rave Siren Lead",
+    "category": "Lead",
+    "src": "/audio/vonar/rave-siren-lead.mp3"
+  },
+  {
+    "name": "Harmony Twin Lead",
+    "category": "Guitar",
+    "src": "/audio/vonar/harmony-twin-lead.mp3"
+  },
+  {
+    "name": "Dream Keys",
+    "category": "Keys",
+    "src": "/audio/vonar/dream-keys.mp3"
+  },
+  {
+    "name": "House Piano Stab",
+    "category": "Keys",
+    "src": "/audio/vonar/house-piano-stab.mp3"
+  },
+  {
+    "name": "Church Bell Toll",
+    "category": "Bell",
+    "src": "/audio/vonar/church-bell-toll.mp3"
+  },
+  {
+    "name": "House Pump Pad",
+    "category": "Pad",
+    "src": "/audio/vonar/house-pump-pad.mp3"
+  },
+  {
+    "name": "Neon Grid Pad",
+    "category": "Pad",
+    "src": "/audio/vonar/neon-grid-pad.mp3"
+  },
+  {
+    "name": "Distorted Fanfare",
+    "category": "Brass",
+    "src": "/audio/vonar/distorted-fanfare.mp3"
+  },
+  {
+    "name": "Bassoon Low",
+    "category": "Woodwind",
+    "src": "/audio/vonar/bassoon-low.mp3"
+  },
+  {
+    "name": "Acid Line Arp",
+    "category": "Arp",
+    "src": "/audio/vonar/acid-line-arp.mp3"
+  },
+  {
+    "name": "808 Boom Kick",
+    "category": "Drums",
+    "src": "/audio/vonar/808-boom-kick.mp3"
+  }
+]
