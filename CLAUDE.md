@@ -279,5 +279,10 @@ Każdy punkt musi być spełniony przed pierwszą publikacją i sprawdzany przy 
   że dane osoby odpowiedzialnej zostaną podane na uzasadnione żądanie. Żadnych prawdziwych danych
   osobowych autora na stronie ani w repo.
 - Wniosek do SignPath Foundation po publicznym wydaniu Vonara.
+- Czcionki (Etap 2): Fontsource dołącza wszystkie podzbiory (cyrylica, greka, wietnamski). Przeglądarka
+  pobiera tylko potrzebne (`unicode-range`), ale można importować tylko `latin` + `latin-ext`, żeby
+  zmniejszyć `dist/`. Do rozważenia: wersja zmienna `@fontsource-variable/inter` (jeden plik zamiast kilku).
+- CI: gitleaks pobierany jako plik binarny z sumą SHA-256 (zamiast `gitleaks-action`, która wymaga
+  licencji dla organizacji). Dependabot nie aktualizuje go sam — przy aktualizacji zmienić wersję i sumę ręcznie.
 - Newsletter (później): polityka prywatności rozszerzona o dane subskrybentów, regulamin newslettera,
   niezaznaczony checkbox zgody, double opt-in, link wypisania, ochrona przed spamem (punkty 17–18).
