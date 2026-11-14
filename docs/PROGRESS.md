@@ -107,7 +107,7 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
 | 13 | Kontrast | ✅ kolory z makiety; `#A3A3A3` tylko w dużych nagłówkach |
 | 14 | Telefon | ✅ 375 px bez przewijania w bok (Playwright, każda strona) |
 | 15 | Strona 404 | ✅ |
-| 16 | Zepsute linki | ✅ wewnętrzne w CI; ⚠️ zewnętrzne — sprawdzić raz przed publikacją |
+| 16 | Zepsute linki | ✅ wewnętrzne w CI; zewnętrzne sprawdzone 2026-11-14 (linki GitHub: 200 z `curl`; strony `xami-sound.pages.dev` przeklikane przez użytkownika) |
 | 17 | Walidacja formularzy | ➖ nie dotyczy (brak formularzy) |
 | 18 | Ochrona przed spamem | ➖ nie dotyczy |
 | 19 | Statystyki | ✅ decyzja: **wyłączone** (2026-11-14). Cloudflare Web Analytics na `pages.dev` nie ma opcji pomijania UE; liczba pobrań — liczniki na GitHubie. `/legal/` mówi, że strona nie zbiera statystyk |
@@ -145,3 +145,4 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
 - 2026-11-14: Web Analytics — test w DevTools (działało, liczyło też UE); opcji pomijania UE na `pages.dev` brak → użytkownik wyłączył analitykę, `/legal/` poprawione. Lighthouse dodany do wymaganych jobów `main`.
 - 2026-11-14: użytkownik — Advanced Security w obu repo, `SECURITY.md` w Vonarze.
 - 2026-11-14: użytkownik — 2FA na kontach, ochrona podglądów PR (Cloudflare Access); bez maili o wdrożeniach.
+- 2026-11-14: linki zewnętrzne sprawdzone; strona 404 bez `canonical`.
