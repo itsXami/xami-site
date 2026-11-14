@@ -32,6 +32,9 @@ najpierw produkt, potem otoczka.
   Nigdy nie wypychaj prosto na `main` (chroni go reguła w ustawieniach repo).
 - Cloudflare Pages publikuje `main` automatycznie, a każdy PR dostaje adres podglądu.
   Podaj użytkownikowi adres podglądu przy każdym PR.
+- Scalanie (zgoda użytkownika z 2026-11-14): Claude scala PR sam, gdy wszystkie wymagane joby CI
+  i podgląd Cloudflare Pages są zielone. Nie scala przy czerwonym CI ani konflikcie. Po scaleniu podaje
+  użytkownikowi adres podglądu i produkcji.
 - CI musi co najmniej zbudować stronę (`npm run build`) i sprawdzić linki wewnętrzne.
 - Zmieniaj tylko to, o co poproszono. Pomysły spoza zakresu zapisz w „Otwarte”, nie wdrażaj ich.
 - Prowadź `docs/PROGRESS.md` (stan prac, po polsku), tak jak w repo Vonara.
@@ -267,7 +270,7 @@ Każdy punkt musi być spełniony przed pierwszą publikacją i sprawdzany przy 
 
 - Zakłada darmowe konto Cloudflare i podłącza repo do Cloudflare Pages (jednorazowo).
 - Włącza regułę ochrony `main` w repo (jak w Vonarze: PR wymagany, 0 zatwierdzeń, CI musi przejść).
-- Ogląda adresy podglądu, odsłuchuje dema, akceptuje zmiany.
+- Ogląda adresy podglądu i produkcji, odsłuchuje dema. Scalanie PR zostawia Claude (patrz „Sposób pracy”).
 
 ## Otwarte
 

@@ -6,8 +6,8 @@ Ten plik wystarcza, żeby nowa sesja mogła kontynuować pracę. Zasady i decyzj
 
 | # | Etap | Status |
 |---|------|--------|
-| 1 | Szkielet Astro + publikacja na Cloudflare Pages | 🔄 kod gotowy (PR), czeka na podłączenie Cloudflare Pages |
-| 2 | Strona Vonara (makieta A) | — |
+| 1 | Szkielet Astro + publikacja na Cloudflare Pages | ✅ gotowe |
+| 2 | Strona Vonara (makieta A) | ⏳ następny |
 | 3 | Dema audio (12 presetów) | — |
 | 4 | Wykończenie: `/legal` i „Lista przed publikacją” | — |
 
@@ -34,6 +34,7 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
 - 2026-11-14: repo założone; pierwszy commit z `CLAUDE.md`, README, `.gitignore` i tym plikiem.
 - 2026-11-14: Etap 1 — szkielet Astro, czcionki, `_headers`, CI (build, linki, gitleaks), Dependabot (PR #1).
 - 2026-11-14: reguła `main` z wymaganymi jobami CI; projekt Cloudflare Pages `xami-sound`, adres `xami-sound.pages.dev`.
+- 2026-11-14: Etap 1 zakończony (produkcja i podgląd PR działają). Od teraz Claude scala PR sam przy zielonym CI i podglądzie.
 
 ## Do zrobienia przez użytkownika
 
