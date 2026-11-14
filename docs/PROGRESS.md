@@ -37,7 +37,7 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
 - Fakty o wydaniu w `src/data/vonar.ts` (wersja, link do pliku, SHA-256, rozmiar, liczby). Przy nowej wersji Vonara
   zmień je tam.
 - Lista presetów `src/data/vonar-presets.json` generowana z plików JSON Vonara:
-  `node scripts/sync-vonar-presets.mjs <ścieżka do repo Vonara>`. Nazwy w pasku są sprawdzane przy buildzie.
+  `node scripts/sync-vonar.mjs <ścieżka do repo Vonara>` (kopiuje też notatki wydań). Nazwy w pasku są sprawdzane przy buildzie.
 - SHA-256 `Vonar-1.0.0-Setup.exe`: `e580c3dc3b25b4be998d9c526e5ed6636b3540e4d068ba92381f9d6532e30802`
   (plik pobrany z Release v1.0.0, 4 551 918 bajtów).
 - Zrzuty w `src/assets/vonar/` z `VOLT_Render --snapshot … 1.5 <zakładka>` (Vonar `711887e` = tag v1.0.0,
@@ -69,7 +69,10 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
 - [x] `/vonar/getting-started/` — instrukcja instalacji (pobranie, SmartScreen krok po kroku, SHA-256, instalator,
   FL Studio, presety, makra; fakty z README Vonara). Linki: „Install guide” w menu, podpowiedź pod przyciskami
   w hero, przycisk „Installation guide” w bloku pobierania, link w stopce.
-- [ ] `/vonar/faq`, `/vonar/changelog` (zaległe z Etapu 2).
+- [x] `/vonar/faq/` (11 pytań, odpowiedzi z README, CONTRIBUTING i notatek wydań) i `/vonar/changelog/`
+  (notatki wydań skopiowane z `docs/releases/` Vonara do `src/content/vonar-releases/` przez
+  `scripts/sync-vonar.mjs`, renderowane przy buildzie). Wspólny układ podstron: `src/layouts/Page.astro`.
+  Linki: stopka (Installation guide · FAQ · Changelog), numer wersji w hero → changelog, instrukcja → FAQ.
 - [ ] `/legal`, strona 404.
 - [ ] SEO: favicon, Open Graph, `sitemap.xml`, `robots.txt`.
 - [ ] Bezpieczeństwo i jakość: `security.txt`, `SECURITY.md`, `docs/INCIDENT.md`, Lighthouse w CI.
@@ -84,6 +87,7 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
 - 2026-11-14: Etap 3 — 12 dem audio (wybór użytkownika, Rave Siren Lead zamiast Fuzz Bassline), odtwarzacz z filtrem.
 - 2026-11-14: galeria — nowy zrzut zakładki Presets (otwarte menu presetów, od użytkownika).
 - 2026-11-14: Etap 4 (1) — instrukcja instalacji z sekcją o SmartScreen i linki do niej (prośba użytkownika).
+- 2026-11-14: Etap 4 (2) — FAQ i changelog.
 
 ## Do zrobienia przez użytkownika
 

@@ -1,0 +1,48 @@
+---
+import Page from '../../layouts/Page.astro';
+import { vonar } from '../../data/vonar';
+
+// Release notes are copied from the Vonar repo (docs/releases/) by scripts/sync-vonar.mjs.
+type Md = { compiledContent: () => Promise<string> | string };
+const files = import.meta.glob<Md>('../../content/vonar-releases/*.md', { eager: true });
+
+const byVersion = (a: string, b: string) => {
+  const pa = a.split('.').map(Number);
+  const pb = b.split('.').map(Number);
+  for (let i = 0; i < 3; i++) if (pa[i] !== pb[i]) return pb[i] - pa[i];
+  return 0;
+};
+
+const releases = await Promise.all(
+  Object.entries(files).map(async ([file, mod]) => {
+    const version = file.match(/v(\d+\.\d+\.\d+)\.md$/)![1];
+    // One page heading (h1) only: each release starts at h2.
+    const html = (await mod.compiledContent())
+      .replace(/<(\/?)h3/g, '<$1h4')
+      .replace(/<(\/?)h2/g, '<$1h3')
+      .replace(/<(\/?)h1/g, '<$1h2')
+      .replace(/<(h[2-4]) id="[^"]*"/g, '<$1'); // heading ids would repeat across releases
+    return { version, html };
+  }),
+);
+releases.sort((a, b) => byVersion(a.version, b.version));
+---
+
+<Page
+  title="Vonar changelog – what changed in each version · Xami"
+  description="Release notes for every version of the free Vonar wavetable synth (VST3, Windows)."
+  eyebrow="Changelog"
+  heading="What's new."
+  headingMuted="Every version."
+>
+  {
+    releases.map((r) => (
+      <section class="card-block" id={`v${r.version}`}>
+        <Fragment set:html={r.html} />
+        <p>
+          <a href={`${vonar.repoUrl}/releases/tag/v${r.version}`}>Release v{r.version} on GitHub</a>
+        </p>
+      </section>
+    ))
+  }
+</Page>

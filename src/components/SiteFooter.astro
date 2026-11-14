@@ -3,7 +3,12 @@ import { vonar } from '../data/vonar';
 ---
 
 <footer class="site-footer wrap">
-  <span>Vonar by Xami · AGPLv3 · <a href={vonar.guidePath}>Installation guide</a></span>
+  <nav aria-label="Footer">
+    <span>Vonar by Xami · AGPLv3</span>
+    <a href={vonar.guidePath}>Installation guide</a>
+    <a href={vonar.faqPath}>FAQ</a>
+    <a href={vonar.changelogPath}>Changelog</a>
+  </nav>
   <span>VST is a trademark of Steinberg Media Technologies GmbH.</span>
 </footer>
 
@@ -18,6 +23,12 @@ import { vonar } from '../data/vonar';
     border-top: 1px solid var(--line);
     font-size: 14px;
     color: var(--text-3);
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 16px;
   }
 
   a {
