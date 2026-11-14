@@ -1,0 +1,105 @@
+---
+import Page from '../../layouts/Page.astro';
+import { vonar } from '../../data/vonar';
+
+// Answers follow the Vonar README, CONTRIBUTING.md and release notes.
+const { installer } = vonar;
+const issuesUrl = `${vonar.repoUrl}/issues`;
+---
+
+<Page
+  title="Vonar FAQ – SmartScreen, macOS, presets and more · Xami"
+  description="Answers about the free Vonar synth: why Windows SmartScreen warns you, checking the download, macOS support, other DAWs, where your presets are saved."
+  eyebrow="FAQ"
+  heading="Questions."
+  headingMuted="Short answers."
+>
+  <section class="card-block">
+    <h2 id="free">Is Vonar really free?</h2>
+    <p>
+      Yes. No account, no licence key, nothing to unlock. You can use it in your music, also commercially. The music
+      and sounds you make with Vonar are yours. The plugin itself is free software under the{' '}
+      <a href={vonar.licenseUrl}>AGPLv3</a>.
+    </p>
+  </section>
+
+  <section class="card-block">
+    <h2 id="smartscreen">Why does Windows SmartScreen warn me?</h2>
+    <p>
+      The installer is not signed with a paid code-signing certificate, so Windows does not recognise the publisher
+      yet. Click <strong>More info</strong>, then <strong>Run anyway</strong>. The
+      <a href={`${vonar.guidePath}#smartscreen`}>installation guide</a> shows each step.
+    </p>
+  </section>
+
+  <section class="card-block">
+    <h2 id="sha256">How do I check that my download is genuine?</h2>
+    <p>Open PowerShell in your Downloads folder and run:</p>
+    <pre><code>Get-FileHash .\{installer.fileName} -Algorithm SHA256</code></pre>
+    <p>The result must be:</p>
+    <pre><code>{installer.sha256}</code></pre>
+    <p>
+      Official downloads are only available from this site and the GitHub repository. Any other site is
+      unofficial.
+    </p>
+  </section>
+
+  <section class="card-block">
+    <h2 id="macos">Does Vonar work on macOS?</h2>
+    <p>
+      No. Vonar is a 64-bit (x64) VST3 plugin for {vonar.platform}. There is no macOS build and no ARM64 build.
+    </p>
+  </section>
+
+  <section class="card-block">
+    <h2 id="daws">Does it work in DAWs other than FL Studio?</h2>
+    <p>
+      Vonar is a standard VST3 plugin and installs into <code>C:\Program Files\Common Files\VST3</code>, where
+      every DAW looks for plugins. FL Studio is the main target and the host it is tested in by hand.
+    </p>
+  </section>
+
+  <section class="card-block">
+    <h2 id="fl-presets">Why are the presets not in FL Studio's preset menu?</h2>
+    <p>
+      Vonar has its own preset bar at the top of its window: click the preset name to open the menu grouped by
+      category. The plugin gives FL Studio a single “program”, so FL Studio's own preset list stays empty. Your
+      sound, preset name and macro labels are still saved in the project.
+    </p>
+  </section>
+
+  <section class="card-block">
+    <h2 id="user-presets">Where are my own presets saved?</h2>
+    <p>
+      Presets you save with <strong>SAVE</strong> are JSON files in <code>%APPDATA%\Vonar\Presets</code>. You can
+      copy them to another computer; afterwards choose <em>Rescan user presets</em> in the preset menu.
+    </p>
+  </section>
+
+  <section class="card-block">
+    <h2 id="volt">I used VOLT before. What changed?</h2>
+    <p>
+      Vonar was called VOLT during development. The installer removes the old <code>VOLT.vst3</code> so FL Studio
+      does not list the plugin twice. Projects made with VOLT open in Vonar with their sounds, and your presets are
+      copied over automatically.
+    </p>
+  </section>
+
+  <section class="card-block">
+    <h2 id="uninstall">How do I uninstall it?</h2>
+    <p>Open <strong>Settings → Apps</strong> in Windows and uninstall Vonar.</p>
+  </section>
+
+  <section class="card-block">
+    <h2 id="share">Can I share my presets?</h2>
+    <p>
+      Yes. Presets are the only contributions accepted for now. See <a href={vonar.contributingUrl}>how to submit a
+      preset</a>.
+    </p>
+  </section>
+
+  <section class="card-block">
+    <h2 id="bug">I found a bug. Where do I report it?</h2>
+    <p>Open an <a href={issuesUrl}>issue on GitHub</a>. Ideas are welcome there too.</p>
+  </section>
+</Page>

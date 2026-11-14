@@ -24,6 +24,8 @@ export const vonar = {
     url: `https://github.com/itsXami/vonar/releases/download/v${version}/Vonar-${version}-Windows-x64.zip`,
   },
   guidePath: '/vonar/getting-started/',
+  faqPath: '/vonar/faq/',
+  changelogPath: '/vonar/changelog/',
   platform: 'Windows 10/11',
   format: 'VST3',
   presetCount: presets.length,

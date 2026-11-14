@@ -15,7 +15,7 @@ import { vonar } from '../data/vonar';
     <a class="btn btn--secondary" href="#sounds">Hear the presets</a>
   </div>
   <p class="meta rise d3">
-    v{vonar.version} · {vonar.format} · {vonar.platform} · {vonar.installer.sizeLabel} installer
+    <a href={vonar.changelogPath}>v{vonar.version}</a> · {vonar.format} · {vonar.platform} · {vonar.installer.sizeLabel} installer
   </p>
   <p class="hint rise d3">
     Windows may show a SmartScreen warning — that is expected. <a href={vonar.guidePath}>Installation guide</a>
@@ -72,6 +72,11 @@ import { vonar } from '../data/vonar';
     margin: -12px 0 0;
     font-size: 14px;
     color: var(--text-3);
+  }
+
+  .meta a {
+    color: inherit;
+    text-underline-offset: 3px;
   }
 
   .hint a {
