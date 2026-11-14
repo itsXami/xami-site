@@ -115,12 +115,15 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
 
 ## Do zrobienia przez użytkownika (przed ogłoszeniem strony)
 
-- Podglądy PR: Cloudflare Access (Zero Trust, darmowe) albo wyłączenie podglądów.
-- Repo `xami-site` i `vonar`: Settings → Advanced Security — secret scanning z push protection, Dependabot alerts
-  i security updates, **Private vulnerability reporting** (potrzebne dla `security.txt` i `SECURITY.md`).
-- `security.txt` wskazuje `SECURITY.md` w repo strony — link działa, jeśli repo jest publiczne.
-- `SECURITY.md` w repo Vonara (Claude nie ma tam zapisu).
-- Po publikacji: Google Search Console (instrukcja od Claude).
+- [x] Reguła `main`: wymagane joby `Build and check links`, `Secret scan (gitleaks)`, `Lighthouse (mobile)`.
+- [x] Advanced Security w `xami-site` i `vonar` (secret scanning, Dependabot, Private vulnerability reporting).
+- [x] `SECURITY.md` w repo Vonara.
+- [x] Web Analytics — decyzja: wyłączone.
+- [ ] Passkey/2FA na GitHubie (GitHub wymaga 2FA do ok. 29.12.2026), Cloudflare i Gmailu projektu;
+  kody odzyskiwania offline.
+- [ ] Podglądy PR: Cloudflare Access (Zero Trust, darmowe) albo wyłączenie podglądów.
+- [ ] `security.txt` wskazuje `SECURITY.md` w repo strony — link działa, jeśli repo jest publiczne.
+- [ ] Po publikacji: Google Search Console (instrukcja od Claude).
 
 ## Dziennik
 
@@ -138,3 +141,4 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
 - 2026-11-14: Etap 4 (5) — Lighthouse w CI, `security.txt`, `SECURITY.md`, plan awaryjny; status 20 punktów.
 - 2026-11-14: Etap 4 (6) — Web Analytics włączone (użytkownik), `/legal/` uzupełnione.
 - 2026-11-14: Web Analytics — test w DevTools (działało, liczyło też UE); opcji pomijania UE na `pages.dev` brak → użytkownik wyłączył analitykę, `/legal/` poprawione. Lighthouse dodany do wymaganych jobów `main`.
+- 2026-11-14: użytkownik — Advanced Security w obu repo, `SECURITY.md` w Vonarze.
