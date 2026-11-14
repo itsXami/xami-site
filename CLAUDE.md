@@ -23,7 +23,7 @@ najpierw produkt, potem otoczka.
 | Podpis | Tylko pseudonim **Xami**. Nigdzie imienia, nazwiska, wieku, miasta ani prywatnego e-maila. |
 | Wygląd | Makieta **A — Studio (jasna)**: https://claude.ai/artifact/8j3j1wNBnXhnxjFmoQ4czz |
 | Pobieranie | Przycisk prowadzi prosto do pliku z GitHub Releases Vonara. Plików pluginu nie kopiujemy na stronę. |
-| Statystyki | Tylko Cloudflare Web Analytics (bez ciasteczek, więc bez banera cookies). |
+| Statystyki | Tylko Cloudflare Web Analytics (bez ciasteczek, więc bez banera cookies), **z pomijaniem odwiedzających z UE** (decyzja użytkownika 2026-11-14). Liczbę pobrań pokazują liczniki plików na GitHubie. |
 | Platformy Vonara | Tylko Windows (VST3). Nie obiecuj macOS ani Linuksa. |
 
 ## Sposób pracy

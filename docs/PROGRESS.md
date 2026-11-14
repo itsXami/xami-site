@@ -110,13 +110,11 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
 | 16 | Zepsute linki | ✅ wewnętrzne w CI; ⚠️ zewnętrzne — sprawdzić raz przed publikacją |
 | 17 | Walidacja formularzy | ➖ nie dotyczy (brak formularzy) |
 | 18 | Ochrona przed spamem | ➖ nie dotyczy |
-| 19 | Statystyki | ✅ Cloudflare Web Analytics włączone przez użytkownika w projekcie Pages (2026-11-14); ⚠️ sprawdzić w konsoli przeglądarki brak błędów CSP i tryb dla odwiedzających z UE |
+| 19 | Statystyki | ✅ Cloudflare Web Analytics w projekcie Pages, **z pomijaniem odwiedzających z UE/EOG, UK i CH** (decyzja użytkownika 2026-11-14; bezpieczniej prawnie, bez banera). Skrypt sprawdzony w DevTools: `beacon.min.js` 200, `rum` 204, bez błędów CSP |
 | 20 | Jedno wezwanie do działania | ✅ „Download” |
 
 ## Do zrobienia przez użytkownika (przed ogłoszeniem strony)
 
-- Web Analytics (włączone): po wdrożeniu otworzyć produkcję z konsolą (F12) i sprawdzić brak błędów CSP; sprawdzić
-  w panelu, czy jest opcja pomijania odwiedzających z UE, i dać znać, jeśli trzeba dopisać to w `/legal/`.
 - Podglądy PR: Cloudflare Access (Zero Trust, darmowe) albo wyłączenie podglądów.
 - Repo `xami-site` i `vonar`: Settings → Advanced Security — secret scanning z push protection, Dependabot alerts
   i security updates, **Private vulnerability reporting** (potrzebne dla `security.txt` i `SECURITY.md`).
@@ -140,3 +138,4 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
 - 2026-11-14: Etap 4 (4) — favicon, obraz podglądu linku, sitemap, robots.txt.
 - 2026-11-14: Etap 4 (5) — Lighthouse w CI, `security.txt`, `SECURITY.md`, plan awaryjny; status 20 punktów.
 - 2026-11-14: Etap 4 (6) — Web Analytics włączone (użytkownik), `/legal/` uzupełnione.
+- 2026-11-14: Web Analytics — test w DevTools (działa, UE była liczona); decyzja: pomijać UE, `/legal/` poprawione.
