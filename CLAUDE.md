@@ -222,7 +222,8 @@ Vonara (bez prywatnego e-maila), `Expires` krócej niż rok naprzód (przypomnie
   Nie używać Certum Open Source (płatny i pokazuje imię i nazwisko w podpisie).
 
 **Monitoring i reakcja**
-- Powiadomienia e-mail o wdrożeniach z Cloudflare Pages (nieoczekiwane wdrożenie = alarm).
+- ~~Powiadomienia e-mail o wdrożeniach~~ — użytkownik nie chce (2026-11-14). Zamiast tego co jakiś czas przejrzeć
+  Pages → Deployments (nieoczekiwane wdrożenie = alarm, patrz `docs/INCIDENT.md`).
 - Raz w miesiącu: wyszukanie „Vonar VST download” i literówek, zgłaszanie fałszywych stron
   (Google Safe Browsing, Microsoft „Report unsafe site”).
 - Plan awaryjny w `docs/INCIDENT.md`: cofnięcie wdrożenia (Pages → Deployments → Rollback),

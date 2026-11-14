@@ -119,9 +119,12 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
 - [x] Advanced Security w `xami-site` i `vonar` (secret scanning, Dependabot, Private vulnerability reporting).
 - [x] `SECURITY.md` w repo Vonara.
 - [x] Web Analytics — decyzja: wyłączone.
-- [ ] Passkey/2FA na GitHubie (GitHub wymaga 2FA do ok. 29.12.2026), Cloudflare i Gmailu projektu;
-  kody odzyskiwania offline.
-- [ ] Podglądy PR: Cloudflare Access (Zero Trust, darmowe) albo wyłączenie podglądów.
+- [x] 2FA (aplikacja 2FAS) na GitHubie, Cloudflare i Gmailu projektu; passkey w Gmailu; kody odzyskiwania offline.
+  Do dokończenia przez użytkownika: passkey na GitHubie, usunięcie SMS jako metody 2FA na GitHubie,
+  weryfikacja pomocniczego e-maila w Google.
+- [x] Podglądy PR chronione przez Cloudflare Access (Pages → Settings → Preview access). Produkcja publiczna.
+- [—] Powiadomienia e-mail o wdrożeniach: **użytkownik nie chce** (2026-11-14). Zamiast tego co jakiś czas
+  przejrzeć Pages → Deployments (nieznane wdrożenie = `docs/INCIDENT.md`).
 - [ ] `security.txt` wskazuje `SECURITY.md` w repo strony — link działa, jeśli repo jest publiczne.
 - [ ] Po publikacji: Google Search Console (instrukcja od Claude).
 
@@ -142,3 +145,4 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
 - 2026-11-14: Etap 4 (6) — Web Analytics włączone (użytkownik), `/legal/` uzupełnione.
 - 2026-11-14: Web Analytics — test w DevTools (działało, liczyło też UE); opcji pomijania UE na `pages.dev` brak → użytkownik wyłączył analitykę, `/legal/` poprawione. Lighthouse dodany do wymaganych jobów `main`.
 - 2026-11-14: użytkownik — Advanced Security w obu repo, `SECURITY.md` w Vonarze.
+- 2026-11-14: użytkownik — 2FA na kontach, ochrona podglądów PR (Cloudflare Access); bez maili o wdrożeniach.
