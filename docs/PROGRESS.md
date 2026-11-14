@@ -119,9 +119,8 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
 - [x] Advanced Security w `xami-site` i `vonar` (secret scanning, Dependabot, Private vulnerability reporting).
 - [x] `SECURITY.md` w repo Vonara.
 - [x] Web Analytics — decyzja: wyłączone.
-- [x] 2FA (aplikacja 2FAS) na GitHubie, Cloudflare i Gmailu projektu; passkey w Gmailu; kody odzyskiwania offline.
-  Do dokończenia przez użytkownika: passkey na GitHubie, usunięcie SMS jako metody 2FA na GitHubie,
-  weryfikacja pomocniczego e-maila w Google.
+- [x] 2FA (aplikacja 2FAS) na GitHubie, Cloudflare i Gmailu projektu; passkey w Gmailu i na GitHubie; SMS usunięty
+  z 2FA na GitHubie; pomocniczy e-mail w Google zweryfikowany; kody odzyskiwania offline.
 - [x] Podglądy PR chronione przez Cloudflare Access (Pages → Settings → Preview access). Produkcja publiczna.
 - [—] Powiadomienia e-mail o wdrożeniach: **użytkownik nie chce** (2026-11-14). Zamiast tego co jakiś czas
   przejrzeć Pages → Deployments (nieznane wdrożenie = `docs/INCIDENT.md`).
