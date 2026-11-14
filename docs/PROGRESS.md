@@ -73,7 +73,12 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
   (notatki wydań skopiowane z `docs/releases/` Vonara do `src/content/vonar-releases/` przez
   `scripts/sync-vonar.mjs`, renderowane przy buildzie). Wspólny układ podstron: `src/layouts/Page.astro`.
   Linki: stopka (Installation guide · FAQ · Changelog), numer wersji w hero → changelog, instrukcja → FAQ.
-- [ ] `/legal`, strona 404.
+- [x] `/legal/` — Privacy (RODO art. 13: administrator Xami + e-mail projektu, cel, art. 6 ust. 1 lit. f, Cloudflare
+  jako podmiot przetwarzający, DPF + SCC, okres według Cloudflare, prawa, skarga do Prezesa UODO, brak ciasteczek,
+  GitHub jako osobny administrator przy pobieraniu) i Terms. **Statystyki: `[DO UZUPEŁNIENIA]`** — użytkownik
+  sprawdza tryb Cloudflare Web Analytics w panelu. Link „Legal” w stopce.
+- [x] Strona 404 (`src/pages/404.astro` → `dist/404.html`, Cloudflare Pages podaje ją sama) z linkiem do pobrania
+  i strony głównej.
 - [ ] SEO: favicon, Open Graph, `sitemap.xml`, `robots.txt`.
 - [ ] Bezpieczeństwo i jakość: `security.txt`, `SECURITY.md`, `docs/INCIDENT.md`, Lighthouse w CI.
 
@@ -88,6 +93,7 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
 - 2026-11-14: galeria — nowy zrzut zakładki Presets (otwarte menu presetów, od użytkownika).
 - 2026-11-14: Etap 4 (1) — instrukcja instalacji z sekcją o SmartScreen i linki do niej (prośba użytkownika).
 - 2026-11-14: Etap 4 (2) — FAQ i changelog.
+- 2026-11-14: Etap 4 (3) — `/legal` i strona 404.
 
 ## Do zrobienia przez użytkownika
 
