@@ -9,7 +9,7 @@ Ten plik wystarcza, żeby nowa sesja mogła kontynuować pracę. Zasady i decyzj
 | 1 | Szkielet Astro + publikacja na Cloudflare Pages | ✅ gotowe |
 | 2 | Strona Vonara (makieta A) | ✅ gotowe |
 | 3 | Dema audio (12 presetów) | ✅ gotowe |
-| 4 | Wykończenie: `/legal` i „Lista przed publikacją” | ⏳ następny |
+| 4 | Wykończenie: podstrony Vonara, `/legal` i „Lista przed publikacją” | 🔄 w toku |
 
 ## Etap 1 — co jest w repo
 
@@ -64,6 +64,16 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
   klawiaturą, koniec dźwięku resetuje przycisk, zero błędów w konsoli, pusty localStorage i ciasteczka,
   brak przewijania w bok przy 375 px. Sprawdzanie linków obejmuje też ścieżki MP3 (`data-src`).
 
+## Etap 4 — postęp
+
+- [x] `/vonar/getting-started/` — instrukcja instalacji (pobranie, SmartScreen krok po kroku, SHA-256, instalator,
+  FL Studio, presety, makra; fakty z README Vonara). Linki: „Install guide” w menu, podpowiedź pod przyciskami
+  w hero, przycisk „Installation guide” w bloku pobierania, link w stopce.
+- [ ] `/vonar/faq`, `/vonar/changelog` (zaległe z Etapu 2).
+- [ ] `/legal`, strona 404.
+- [ ] SEO: favicon, Open Graph, `sitemap.xml`, `robots.txt`.
+- [ ] Bezpieczeństwo i jakość: `security.txt`, `SECURITY.md`, `docs/INCIDENT.md`, Lighthouse w CI.
+
 ## Dziennik
 
 - 2026-11-14: repo założone; pierwszy commit z `CLAUDE.md`, README, `.gitignore` i tym plikiem.
@@ -73,6 +83,7 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
 - 2026-11-14: Etap 2 — strona Vonara według makiety A, zrzuty z aktualnej wersji, link do pliku i SHA-256.
 - 2026-11-14: Etap 3 — 12 dem audio (wybór użytkownika, Rave Siren Lead zamiast Fuzz Bassline), odtwarzacz z filtrem.
 - 2026-11-14: galeria — nowy zrzut zakładki Presets (otwarte menu presetów, od użytkownika).
+- 2026-11-14: Etap 4 (1) — instrukcja instalacji z sekcją o SmartScreen i linki do niej (prośba użytkownika).
 
 ## Do zrobienia przez użytkownika
 

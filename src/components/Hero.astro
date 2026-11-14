@@ -17,6 +17,9 @@ import { vonar } from '../data/vonar';
   <p class="meta rise d3">
     v{vonar.version} · {vonar.format} · {vonar.platform} · {vonar.installer.sizeLabel} installer
   </p>
+  <p class="hint rise d3">
+    Windows may show a SmartScreen warning — that is expected. <a href={vonar.guidePath}>Installation guide</a>
+  </p>
 </section>
 
 <style>
@@ -63,6 +66,18 @@ import { vonar } from '../data/vonar';
     margin: 0;
     font-size: 14px;
     color: var(--text-3);
+  }
+
+  .hint {
+    margin: -12px 0 0;
+    font-size: 14px;
+    color: var(--text-3);
+  }
+
+  .hint a {
+    color: var(--text);
+    font-weight: 600;
+    text-underline-offset: 3px;
   }
 
   @media (prefers-reduced-motion: no-preference) {
