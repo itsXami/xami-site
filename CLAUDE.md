@@ -15,7 +15,7 @@ najpierw produkt, potem otoczka.
 
 | Temat | Decyzja |
 |---|---|
-| Adres | `xami.pages.dev` (jeśli zajęty: `xami-audio.pages.dev` lub podobny). Własna domena dopiero w Etapie 4 wizji. |
+| Adres | `xami-sound.pages.dev` (projekt Cloudflare Pages `xami-sound`, wybór użytkownika). Własna domena dopiero w Etapie 4 wizji. |
 | Hosting | Cloudflare Pages, darmowy plan. |
 | Technologia | Astro, wynik to statyczny HTML. Bez serwera, bez bazy danych. |
 | Repo | `itsXami/xami-site` na GitHubie. |
@@ -273,7 +273,7 @@ Każdy punkt musi być spełniony przed pierwszą publikacją i sprawdzany przy 
 
 - ~~Ile dem~~ — zdecydowane: **12 presetów wybranych przez użytkownika**. Lista nazw do uzupełnienia
   przed etapem 3; nazwy i kategorie sprawdzić w plikach JSON presetów Vonara.
-- Czy adres `xami.pages.dev` jest wolny — sprawdzić przy zakładaniu projektu w Cloudflare.
+- ~~Adres strony~~ — zdecydowane: `xami-sound.pages.dev`.
 - ~~E-mail projektu~~ — założony: `xami.sound@gmail.com`.
 - ~~Tożsamość administratora w Privacy~~ — zdecydowane: „Xami” + `xami.sound@gmail.com` + zdanie,
   że dane osoby odpowiedzialnej zostaną podane na uzasadnione żądanie. Żadnych prawdziwych danych
