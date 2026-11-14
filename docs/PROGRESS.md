@@ -110,7 +110,7 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
 | 16 | Zepsute linki | ✅ wewnętrzne w CI; ⚠️ zewnętrzne — sprawdzić raz przed publikacją |
 | 17 | Walidacja formularzy | ➖ nie dotyczy (brak formularzy) |
 | 18 | Ochrona przed spamem | ➖ nie dotyczy |
-| 19 | Statystyki | ✅ Cloudflare Web Analytics w projekcie Pages, **z pomijaniem odwiedzających z UE/EOG, UK i CH** (decyzja użytkownika 2026-11-14; bezpieczniej prawnie, bez banera). Skrypt sprawdzony w DevTools: `beacon.min.js` 200, `rum` 204, bez błędów CSP |
+| 19 | Statystyki | ✅ decyzja: **wyłączone** (2026-11-14). Cloudflare Web Analytics na `pages.dev` nie ma opcji pomijania UE; liczba pobrań — liczniki na GitHubie. `/legal/` mówi, że strona nie zbiera statystyk |
 | 20 | Jedno wezwanie do działania | ✅ „Download” |
 
 ## Do zrobienia przez użytkownika (przed ogłoszeniem strony)
@@ -120,7 +120,6 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
   i security updates, **Private vulnerability reporting** (potrzebne dla `security.txt` i `SECURITY.md`).
 - `security.txt` wskazuje `SECURITY.md` w repo strony — link działa, jeśli repo jest publiczne.
 - `SECURITY.md` w repo Vonara (Claude nie ma tam zapisu).
-- Dodać job „Lighthouse (mobile)” do wymaganych w regule `main`, gdy przejdzie pierwszy raz.
 - Po publikacji: Google Search Console (instrukcja od Claude).
 
 ## Dziennik
@@ -138,4 +137,4 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
 - 2026-11-14: Etap 4 (4) — favicon, obraz podglądu linku, sitemap, robots.txt.
 - 2026-11-14: Etap 4 (5) — Lighthouse w CI, `security.txt`, `SECURITY.md`, plan awaryjny; status 20 punktów.
 - 2026-11-14: Etap 4 (6) — Web Analytics włączone (użytkownik), `/legal/` uzupełnione.
-- 2026-11-14: Web Analytics — test w DevTools (działa, UE była liczona); decyzja: pomijać UE, `/legal/` poprawione.
+- 2026-11-14: Web Analytics — test w DevTools (działało, liczyło też UE); opcji pomijania UE na `pages.dev` brak → użytkownik wyłączył analitykę, `/legal/` poprawione. Lighthouse dodany do wymaganych jobów `main`.
