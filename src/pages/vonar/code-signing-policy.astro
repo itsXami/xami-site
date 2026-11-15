@@ -1,0 +1,46 @@
+---
+import Page from '../../layouts/Page.astro';
+import { vonar } from '../../data/vonar';
+
+// Required by SignPath Foundation for its free code signing programme for open-source projects.
+const workflowUrl = `${vonar.repoUrl}/blob/main/.github/workflows/ci.yml`;
+---
+
+<Page
+  title="Vonar code signing policy · Xami"
+  description="How the Vonar installer is code signed: what is signed, who approves it, and what the plugin does with your data."
+  eyebrow="Code signing policy"
+  heading="Signed builds."
+  headingMuted="From public code."
+>
+  <section class="card-block">
+    <p><strong>Free code signing provided by SignPath.io, certificate by SignPath Foundation</strong></p>
+    <p>Status: <strong>Application pending</strong>. Until it is approved, the installer is not signed yet.</p>
+  </section>
+
+  <section class="card-block">
+    <h2>What is signed</h2>
+    <p>
+      Only the Vonar installer (<code>Vonar-&lt;version&gt;-Setup.exe</code>). It is built by GitHub Actions from
+      the public repository <a href={vonar.repoUrl}>itsXami/vonar</a>, using the build steps in{' '}
+      <a href={workflowUrl}>.github/workflows/ci.yml</a>. Nothing built outside this pipeline is signed.
+    </p>
+  </section>
+
+  <section class="card-block">
+    <h2>Roles</h2>
+    <ul>
+      <li><strong>Authors</strong> (write the code): Xami</li>
+      <li><strong>Reviewers</strong> (review every change before it is merged): Xami</li>
+      <li><strong>Approvers</strong> (approve each signing request by hand): Xami</li>
+    </ul>
+  </section>
+
+  <section class="card-block">
+    <h2>Privacy</h2>
+    <p>
+      The Vonar plugin and its installer do not send any data over the network. There is no telemetry, no update
+      check and no account. See also the <a href="/legal/">privacy notice</a> for this website.
+    </p>
+  </section>
+</Page>

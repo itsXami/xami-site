@@ -124,7 +124,7 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
 - [x] Podglądy PR chronione przez Cloudflare Access (Pages → Settings → Preview access). Produkcja publiczna.
 - [—] Powiadomienia e-mail o wdrożeniach: **użytkownik nie chce** (2026-11-14). Zamiast tego co jakiś czas
   przejrzeć Pages → Deployments (nieznane wdrożenie = `docs/INCIDENT.md`).
-- [ ] `security.txt` wskazuje `SECURITY.md` w repo strony — link działa, jeśli repo jest publiczne.
+- [x] `security.txt` wskazuje `SECURITY.md` w repo strony — repo jest publiczne, link działa.
 - [x] Google Search Console: usługa „Prefiks URL” `https://xami-sound.pages.dev/`, weryfikacja plikiem
   `public/google1e0e66706c727097.html` (**nie usuwać** — bez niego Google cofnie weryfikację); mapa `sitemap-index.xml`.
 
@@ -148,3 +148,4 @@ Projekt Cloudflare Pages: `xami-sound` → https://xami-sound.pages.dev. Ustawie
 - 2026-11-14: użytkownik — 2FA na kontach, ochrona podglądów PR (Cloudflare Access); bez maili o wdrożeniach.
 - 2026-11-14: linki zewnętrzne sprawdzone; strona 404 bez `canonical`.
 - 2026-11-14: Google Search Console — plik weryfikacyjny na stronie.
+- 2026-11-15: testy – securityheaders.com A+, MDN HTTP Observatory A+ (145/100, 12/12)

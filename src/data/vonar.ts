@@ -26,6 +26,7 @@ export const vonar = {
   guidePath: '/vonar/getting-started/',
   faqPath: '/vonar/faq/',
   changelogPath: '/vonar/changelog/',
+  codeSigningPath: '/vonar/code-signing-policy/',
   platform: 'Windows 10/11',
   format: 'VST3',
   presetCount: presets.length,
